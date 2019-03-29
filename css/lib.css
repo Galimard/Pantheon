@@ -481,6 +481,7 @@ input[type='radio'].visually-hidden {
     color: #4d4d4d;
     font-size: 14px;
     font-weight: 300;
+    line-height: 24px;
 }
 
 .about-mars-earth {
@@ -520,15 +521,128 @@ input[type='radio'].visually-hidden {
 }
 
 .realization-title {
+    padding-top: 130px;
 }
 
-.realization-text-block {
+.realization-main {
     display: grid;
     grid-template-columns: 700px 380px;
     grid-gap: 60px;
 }
 
+.realization-main-text__title {
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.realization-main-text__text {
+    color: #4d4d4d;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.realization-main-text__span {
+    display: block;
+    color: #e12457;
+    font-size: 18px;
+    margin: 30px 0;
+    line-height: 24px;
+    position: relative;
+}
+
+.realization-main-text__span::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 12px;
+    background: url("../images/quotes.svg") center center no-repeat;
+    position: absolute;
+    top: -5px;
+    left: -33px;
+}
+
+.realization-main__img {
+    width: 325px;
+    height: 373px;
+    position: relative;
+    top: 45px;
+    z-index: 1;
+}
+
+.realization-main__img img {
+    max-width: 100%;
+}
+
+.realization-main__img::after {
+    content: "";
+    display: block;
+    width: 325px;
+    height: 373px;
+    border: 10px solid #e12457;
+    z-index: -1;
+    top: -45px;
+    right: -50px;
+    position: absolute;
+}
+
 .realization-fly {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    height: 308px;
+    background: url("../images/bg2.jpg") center center no-repeat;
+}
+
+.realization-fly__img {
+    position: relative;
+    top: -27px;
+    left: 27px;
+}
+
+.realization-fly-block {
+    color: #ffffff;
+    padding-left: 90px;
+}
+
+.realization-fly-block__title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.realization-fly-block__text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.realization-fly-block__text span {
+    font-weight: 700;
+}
+
+.realization-fly-cost__price {
+    font-size: 60px;
+    font-weight: 100;
+}
+
+.realization-fly-cost__text {
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.realization-fly-cost__btn {
+    width: 200px;
+    box-shadow: 0 0 15px 12px rgba(255, 255, 255, 0.48);
+    border-radius: 33px;
+    background-color: #ffffff;
+    color: #c2529a;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 55px;
+    text-align: center;
+    padding: 16px 40px;
 }
 
 /*--------------------------------------------------стили для video --------------------------------------------------*/
