@@ -1,39 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="47" height="18" viewBox="0 0 47 18">
-  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-      <rdf:Description rdf:about=""/>
-   </rdf:RDF>
-</x:xmpmeta>
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                                                                                                    
-                           
-<?xpacket end="w"?></metadata>
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="47" height="18" viewBox="0 0 47 18">
+  
 <defs>
     <style>
-      .cls-1 {
+      .menu-svg {
         fill: #fff;
         fill-rule: evenodd;
       }
     </style>
   </defs>
-  <path id="Прямоугольник_скругл._углы_1_копия_2" data-name="Прямоугольник, скругл. углы 1 копия 2" class="cls-1" d="M1322,42h27a1,1,0,1,1,0,2h-27A1,1,0,1,1,1322,42Zm0,8h45a1,1,0,1,1,0,2h-45A1,1,0,1,1,1322,50Zm0,8h20a1,1,0,1,1,0,2h-20A1,1,0,1,1,1322,58Z" transform="translate(-1321 -42)"/>
+  <path id="Прямоугольник_скругл._углы_1_копия_2" data-name="Прямоугольник, скругл. углы 1 копия 2" class="menu-svg" d="M1322,42h27a1,1,0,1,1,0,2h-27A1,1,0,1,1,1322,42Zm0,8h45a1,1,0,1,1,0,2h-45A1,1,0,1,1,1322,50Zm0,8h20a1,1,0,1,1,0,2h-20A1,1,0,1,1,1322,58Z" transform="translate(-1321 -42)"/>
 </svg>

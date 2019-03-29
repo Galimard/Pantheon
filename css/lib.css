@@ -49,7 +49,7 @@
 
 /*--------------------------------------------------общие стили--------------------------------------------------*/
 * {
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 html, body {
@@ -103,10 +103,6 @@ input[type='radio'].visually-hidden {
 }
 
 .template-shadow {
-    /*display: grid;*/
-    /*max-width: 1600px;*/
-    /*grid-template-columns: 100%;*/
-    /*grid-template-rows: 950px auto 600px auto auto 1050px 860px;*/
     max-width: 1600px;
     margin: 0 auto;
     box-shadow: 0 0 35px 3px rgba(0, 0, 0, 0.2);
@@ -120,24 +116,272 @@ input[type='radio'].visually-hidden {
 .header {
     display: grid;
     grid-template-columns: 180px auto 115px;
-    grid-template-rows: 100px 850px;
+    grid-template-rows: 100px 710px 140px;
     background: url("../images/bg.jpg") center center no-repeat;
     padding: 0 14.5%;
 }
 
-.header-logo-block {
+.header-logo {
     grid-row: 1/2;
     grid-column: 1/2;
+    color: #ffffff;
+    font-size: 21px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-left: 65px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.header-logo::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url("../images/logo.svg") center center no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+.header-logo__span {
+    display: block;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 100;
+    text-transform: lowercase;
 }
 
 .header-menu-block {
     grid-row: 1/2;
     grid-column: 3/4;
+    padding-top: 40px;
+    position: relative; /*for menu*/
+}
+
+.header-menu-block:hover::after {
+    cursor: pointer;
+}
+
+.header-menu-block__span {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.45px;
+    position: relative;
+}
+
+.header-menu-block__span::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.header-menu-block__span:hover::after {
+    width: 100%;
+}
+
+.header-burger {
+    position: absolute;
+    top: 2px;
+    right: -65px;
+}
+
+.header-menu__cross:hover {
+    -webkit-transform: rotate(180deg) translateY(3px);
+    -moz-transform: rotate(180deg) translateY(3px);
+    -ms-transform: rotate(180deg) translateY(3px);
+    -o-transform: rotate(180deg) translateY(3px);
+    transform: rotate(180deg) translateY(3px);
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.header-burger-line {
+    display: block;
+    cursor: pointer;
+    height: 2px;
+    background-color: #ffffff;
+    border-radius: 1px;
+    margin-bottom: 6px;
+}
+
+.header-burger-line:first-child {
+    width: 30px;
+}
+
+.header-burger-line:nth-child(2) {
+    width: 47px;
+}
+
+.header-burger-line:last-child {
+    width: 22px;
+    margin-bottom: 0;
+}
+
+.burger-line3 {
+    display: none;
+}
+
+.burger-line2:first-child {
+    position: absolute;
+    top: 7px;
+    transform: rotate(45deg);
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.burger-line2:last-child {
+    position: absolute;
+    top: 7px;
+    transform: rotate(-45deg);
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.header-menu {
+    display: none;
+    text-align: right;
+    position: absolute;
+    top: 100px;
+    right: 263px;
+    background: rgba(210, 58, 115, 0.7);
+    border-radius: 4px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-menu__item {
+    padding: 15px;
+    border-bottom: 1px solid #c72a65;
+}
+
+.header-menu-item__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    position: relative;
+}
+
+.header-menu-item__link::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 0;
+    background: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.header-menu-item__link:hover::after {
+    width: 100%;
 }
 
 .header-main {
     grid-row: 2/3;
     grid-column: 2/3;
+    padding-top: 155px;
+}
+
+.header-main__title {
+    color: #ffffff;
+    font-size: 37px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.header-main-title__thin {
+    font-weight: 100;
+}
+
+.header-main-title__bold {
+    font-weight: 900;
+    font-size: 195px;
+    line-height: 140px;
+}
+
+.header-video {
+    position: relative;
+}
+
+.header-video-block {
+    width: 580px;
+    height: 290px;
+    overflow: hidden;
+    margin: 50px auto 0;
+    box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.4);
+}
+
+.header-video__text {
+    display: inline-block;
+    width: 115px;
+    color: #ffcfdf;
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    top: 110px;
+    right: -45px;
+}
+
+.header-video__text::before {
+    content: "";
+    display: block;
+    width: 118px;
+    height: 1px;
+    background: #ff9ebd;
+    position: absolute;
+    top: 35px;
+    right: 135px;
+}
+
+.header-button {
+    grid-row: 3/4;
+    display: block;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: rgba(225, 36, 87, 0.5) url("../images/arrow-down.svg") center center no-repeat;
+}
+
+.header-button:hover {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 /*--------------------------------------------------стили для tizers --------------------------------------------------*/

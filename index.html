@@ -8,25 +8,39 @@
 <body>
     <div class="template-shadow">
         <header class="header">
-            <div class="header-logo-block">Pantheon <span>project</span></div>
+            <div class="header-logo">Pantheon<span class="header-logo__span">project</span></div>
             <div class="header-menu-block">
-                <span>Меню</span>
-                <div class="header-top-burger">
-                    <div class="header-top-burger__wrap">
-                        <span class="burger-line line__main"></span>
-                        <span class="burger-line line__middle"></span>
-                        <span class="burger-line line__main"></span>
-                    </div>
-                </div>
+                <a href="#" class="header-menu-block__span">Меню
+                    <span class="header-burger">
+                        <span class="header-burger-line line__main"></span>
+                        <span class="header-burger-line line__middle"></span>
+                        <span class="header-burger-line line__main"></span>
+                    </span>
+                </a>
             </div>
             <div class="header-main">
-                <h1 class="header-main__title"><span>Пункт назначения:</span><span>Пантеон</span>Марс</h1>
-                <div class="header-video-block">
-                    <span>Первый город на планете Марс, недалеко от горы Олимп</span>
+                <h1 class="header-main__title"><span class="header-main-title__thin">Пункт назначения:</span>Пантеон<br><span class="header-main-title__bold">Марс</span></h1>
+                <div class="header-video">
+                    <div class="header-video-block">
+                        <iframe width="580" height="290" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
+                    </div>
+                    <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
                 </div>
-                <a href="#" class="header-button"></a>
             </div>
+            <a href="#about-mars" class="header-button"></a>
         </header>
+        <div class="header-menu">
+            <nav>
+                <ul>
+                    <li class="header-menu__item"><a href="#header" class="header-menu-item__link">Главная</a></li>
+                    <li class="header-menu__item"><a href="#about" class="header-menu-item__link">О Марсе</a></li>
+                    <li class="header-menu__item"><a href="#schedule" class="header-menu-item__link">От идеи до реализации</a></li>
+                    <li class="header-menu__item"><a href="#lessons" class="header-menu-item__link">Подводные камни в масштабах космоса</a></li>
+                    <li class="header-menu__item"><a href="#reviews" class="header-menu-item__link">Организация жизни в колонии</a></li>
+                    <li class="header-menu__item"><a href="#contacts" class="header-menu-item__link">Когда вылетаем?</a></li>
+                </ul>
+            </nav>
+        </div>
         <div class="tizers">
             <div class="tizers-item"></div>
             <div class="tizers-item"></div>
@@ -35,7 +49,7 @@
             <div class="tizers-item"></div>
             <div class="tizers-item"></div>
         </div>
-        <div class="about-mars">
+        <div id="about-mars" class="about-mars">
             <h2 class="about-mars-title title">Марс. Вспомнить всё.</h2>
             <div class="about-mars-block"></div>
             <div class="about-mars-block"></div>
