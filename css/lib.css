@@ -111,6 +111,12 @@ input[type='radio'].visually-hidden {
     background: url("../images/square-bg.png") center center no-repeat;
 }
 
+.title {
+    color: #e12457;
+    font-size: 60px;
+    font-weight: 700;
+}
+
 /*--------------------------------------------------стили для header --------------------------------------------------*/
 
 .header {
@@ -441,10 +447,17 @@ input[type='radio'].visually-hidden {
     grid-gap: 0 60px;
     background: url("../images/ellips.png") center bottom no-repeat;
     padding: 0 14.5%;
+    position: relative;
 }
 
 .about-mars-title {
     grid-column: 1/-1;
+    margin-top: 85px;
+}
+
+.about-mars-block {
+    margin-top: 50px;
+    padding-right: 50px;
 }
 
 .about-mars-block:first-child {
@@ -456,11 +469,52 @@ input[type='radio'].visually-hidden {
     grid-row: 2/3;
     grid-column: 2/3;
 }
+
+.about-mars-block__title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.about-mars-block__text {
+    color: #4d4d4d;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.about-mars-earth {
+    width: 152px;
+    height: 152px;
+    background: url("../images/Earth.svg") center center no-repeat;
+    position: absolute;
+    bottom: -43px;
+    left: 750px;
+}
+
+.about-mars-rocket {
+    width: 55px;
+    height: 44px;
+    background: url("../images/rocket.svg") center center no-repeat;
+    position: absolute;
+    bottom: 67px;
+    right: 495px;
+}
+
+.about-mars-mars {
+    width: 88px;
+    height: 88px;
+    background: url("../images/Mars.svg") center center no-repeat;
+    position: absolute;
+    bottom: 163px;
+    right: 232px;
+}
+
 /*--------------------------------------------------стили для realization --------------------------------------------------*/
 
 .realization {
     display: grid;
-    grid-template-rows: 140px 440px 505px; /*more 100px*/
+    grid-template-rows: 240px 440px 505px; /*more 100px*/
     grid-gap: 0 60px;
     padding: 0 14.5%;
 }
