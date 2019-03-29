@@ -216,7 +216,7 @@ input[type='radio'].visually-hidden {
     transition: transform 0.5s ease;
 }
 
-.header-burger-line {
+.header-burger__line {
     display: block;
     cursor: pointer;
     height: 2px;
@@ -225,24 +225,24 @@ input[type='radio'].visually-hidden {
     margin-bottom: 6px;
 }
 
-.header-burger-line:first-child {
+.header-burger__line:first-child {
     width: 30px;
 }
 
-.header-burger-line:nth-child(2) {
+.header-burger__line:nth-child(2) {
     width: 47px;
 }
 
-.header-burger-line:last-child {
+.header-burger__line:last-child {
     width: 22px;
     margin-bottom: 0;
 }
 
-.burger-line3 {
+.line-middle {
     display: none;
 }
 
-.burger-line2:first-child {
+.line-main:first-child {
     position: absolute;
     top: 7px;
     transform: rotate(45deg);
@@ -253,7 +253,7 @@ input[type='radio'].visually-hidden {
     transition: transform 0.5s ease;
 }
 
-.burger-line2:last-child {
+.line-main:last-child {
     position: absolute;
     top: 7px;
     transform: rotate(-45deg);
@@ -318,7 +318,7 @@ input[type='radio'].visually-hidden {
     padding-top: 155px;
 }
 
-.header-main__title {
+.header-main-title {
     color: #ffffff;
     font-size: 37px;
     font-weight: 400;
@@ -389,9 +389,47 @@ input[type='radio'].visually-hidden {
 .tizers {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    grid-gap: 63px;
     height: 210px; /*delete*/
     background-color: #fff5f8;
     padding: 0 14.5%;
+}
+
+.tizers-item {
+    position: relative;
+}
+
+.tizers-item::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    background: rgba(225, 36, 87, 0.1);
+    position: absolute;
+    top: 50%;
+    right: -27px;
+    -webkit-transform: translateY(-25px);
+    -moz-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    -o-transform: translateY(-25px);
+    transform: translateY(-25px);
+}
+
+.tizers-item:last-child::after {
+    display: none;
+}
+
+.tizers-item__number {
+    color: #e12457;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.tizers-item__text {
+    color: #4d4d4d;
+    font-size: 13px;
+    font-weight: 300;
 }
 
 /*--------------------------------------------------стили для about-mars --------------------------------------------------*/
