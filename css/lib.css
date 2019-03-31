@@ -652,8 +652,74 @@ input[type='radio'].visually-hidden {
     grid-template-rows: 220px 570px 465px;
     background: url("../images/stars.jpg") center center no-repeat;
     padding: 0 14.5%;
+    color: #ffffff;
 }
 
+.video-title {
+    font-size: 59px;
+    /*color: #ffffff;*/
+    margin: 110px 0 65px;
+}
+
+.video-tabs {
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.video-tabs-list {
+    width: 185px;
+    margin-right: 105px;
+}
+
+.video-tabs-list__item {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.video-tabs-list__item::after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 15px;
+    background: url("../images/arrow-right.svg") center center no-repeat;
+    position: absolute;
+    top: 3px;
+    right: -20px;
+}
+
+.video-tabs-list__link {
+    color: #908bb1;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.video-tabs-list__link:hover,
+.video-tabs-list__link--active {
+    color: #ffffff;
+    font-weight: 700;
+    -webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.video-tabs-block {
+    width: 755px;
+}
+
+.video-tabs-block__title {
+    font-size: 24px;
+    font-weight: 700;
+    /*color: #ffffff;*/
+}
+
+.video-tabs-block__text {
+    font-weight: 300;
+    line-height: 24px;
+    margin-top: 40px;
+}
 /*--------------------------------------------------стили для life --------------------------------------------------*/
 
 .life {
