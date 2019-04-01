@@ -652,7 +652,6 @@ input[type='radio'].visually-hidden {
     grid-template-rows: 220px 570px 465px;
     background: url("../images/stars.jpg") center center no-repeat;
     padding: 0 14.5%;
-    /*color: #ffffff;*/
 }
 
 .video-title {
@@ -712,13 +711,14 @@ input[type='radio'].visually-hidden {
 .video-tabs-block__title {
     font-size: 24px;
     font-weight: 700;
-    /*color: #ffffff;*/
+    color: #ffffff;
 }
 
 .video-tabs-block__text {
     font-weight: 300;
     line-height: 24px;
     margin-top: 40px;
+    color: #ffffff;
 }
 /*--------------------------------------------------стили для life --------------------------------------------------*/
 
@@ -893,4 +893,250 @@ input[type='radio'].visually-hidden {
     grid-template-rows: 245px 415px 200px;
     background: url("../images/Layer_2.jpg") center center no-repeat;
     padding: 0 14.5%;
+}
+
+.footer-title {
+    color: #ffffff;
+    margin-top: 109px;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-main-form-block {
+    width: 395px;
+    height: 415px;
+    padding: 63px 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: -5px;
+}
+
+.footer-main-form__title {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.footer-main-form__input {
+    display: block;
+    height: 23px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px;
+    margin-bottom: 56px;
+}
+
+.footer-main-form__input:first-child {
+    margin-bottom: 26px;
+}
+
+.footer-main-form__input::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-main-form__input:-moz-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-main-form__input::-moz-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-main-form__input:-ms-input-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer-main-form__input:focus::-webkit-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.footer-main-form__input:focus:-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.footer-main-form__input:focus::-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.footer-main-form__input:focus:-ms-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.footer-main-form__btn {
+    width: 255px;
+    height: 57px;
+    box-shadow: 0 0 15px 12px rgba(255, 255, 255, 0.48);
+    border-radius: 33px;
+    background-color: #ffffff;
+    color: #c2529a;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 40px;
+}
+
+.footer-main-text {
+    margin-left: 69px;
+}
+
+.footer-main-form__btn:hover {
+    cursor: pointer;
+}
+
+.footer-main-text__p {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 28px;
+}
+
+.footer-main-text__link {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    border-bottom: 1px solid #ffffff;
+}
+
+.footer-bottom-logo {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding-left: 49px;
+    padding-top: 40px;
+    position: relative;
+}
+
+.footer-bottom-logo::before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url("../images/logo-white.svg") center center no-repeat;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+.footer-bottom-logo__span {
+    display: block;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+.footer-bottom__link {
+    opacity: 0.5;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+    position: relative;
+}
+
+.footer-bottom__link::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.footer-bottom__link:hover::after {
+    width: 0;
+}
+
+.footer-bottom-socials-wrap, .footer-bottom-socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom-socials-wrap {
+    width: 320px;
+}
+
+.footer-bottom-socials {
+    width: 170px;
+}
+
+.footer-bottom-socials__text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.35px;
+}
+
+.footer-bottom-socials__link {
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.footer-bottom-socials__vk {
+    background: url("../images/vk.svg") center center no-repeat;
+}
+
+.footer-bottom-socials__twitter {
+    background: url("../images/twitter.svg") center center no-repeat;
+}
+
+.footer-bottom-socials__facebook {
+    background: url("../images/facebook.svg") center center no-repeat;
+}
+
+.footer-bottom-socials__youtube {
+    background: url("../images/youtube.svg") center center no-repeat;
 }
