@@ -1,3 +1,57 @@
+/*animate css*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeftBig {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-2000px);
+        -ms-transform: translateX(-2000px);
+        transform: translateX(-2000px);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.fadeInLeftBig {
+    -webkit-animation-name: fadeInLeftBig;
+    animation-name: fadeInLeftBig;
+}
+/*animate css*/
+
 /*--------------------------------------------------шрифты--------------------------------------------------*/
 @font-face {
     font-family: 'ProximaNova';
@@ -207,19 +261,9 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 2px;
     right: -65px;
-}
-
-.header-menu__cross:hover {
-    -webkit-transform: rotate(180deg) translateY(3px);
-    -moz-transform: rotate(180deg) translateY(3px);
-    -ms-transform: rotate(180deg) translateY(3px);
-    -o-transform: rotate(180deg) translateY(3px);
-    transform: rotate(180deg) translateY(3px);
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -ms-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
+    display: block;
+    width: 47px;
+    height: 18px;
 }
 
 .header-burger__line {
@@ -244,22 +288,41 @@ input[type='radio'].visually-hidden {
     margin-bottom: 0;
 }
 
-.line-middle {
+.header-burger:hover .header-burger__line:not(.burger-line2):nth-child(1),
+.header-burger:hover .header-burger__line:not(.burger-line2):nth-child(3){
+    transform: rotate(-4deg) scaleY(1.1);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+.header-burger:hover .header-burger__line:not(.burger-line3):nth-child(2){
+    transform: rotate(4deg) scaleY(1.1);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.burger-line3 {
     display: none;
 }
 
-.line-main:first-child {
+.burger-line2:first-child {
     position: absolute;
     top: 7px;
+    width: 22px;
     transform: rotate(45deg);
-    -webkit-transition: transform 0.5s ease;
-    -moz-transition: transform 0.5s ease;
-    -ms-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
+    -webkit-transition: transform 1s ease;
+    -moz-transition: transform 1s ease;
+    -ms-transition: transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1.3s ease;
 }
 
-.line-main:last-child {
+.burger-line2:last-child {
     position: absolute;
     top: 7px;
     transform: rotate(-45deg);
@@ -284,6 +347,10 @@ input[type='radio'].visually-hidden {
 .header-menu__item {
     padding: 15px;
     border-bottom: 1px solid #c72a65;
+}
+
+.header-menu__item:hover {
+    cursor: pointer;
 }
 
 .header-menu-item__link {
@@ -589,8 +656,9 @@ input[type='radio'].visually-hidden {
 }
 
 .realization-fly {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 340px 740px;
+    grid-gap: 63px;
     margin-top: 50px;
     height: 308px;
     background: url("../images/bg2.jpg") center center no-repeat;
@@ -604,22 +672,31 @@ input[type='radio'].visually-hidden {
 
 .realization-fly-block {
     color: #ffffff;
-    padding-left: 90px;
+    padding-top: 60px;
+    padding-right: 60px;
 }
 
 .realization-fly-block__title {
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .realization-fly-block__text {
     font-size: 16px;
     font-weight: 300;
     line-height: 24px;
+    margin-bottom: 30px;
 }
 
 .realization-fly-block__text span {
     font-weight: 700;
+}
+
+.realization-fly-cost {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .realization-fly-cost__price {
@@ -632,17 +709,28 @@ input[type='radio'].visually-hidden {
     font-weight: 100;
 }
 
+.realization-fly-cost__text::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 210px;
+    background: #ffffff;
+}
+
 .realization-fly-cost__btn {
     width: 200px;
+    height: 55px;
     box-shadow: 0 0 15px 12px rgba(255, 255, 255, 0.48);
     border-radius: 33px;
     background-color: #ffffff;
     color: #c2529a;
     font-size: 18px;
     font-weight: 700;
-    line-height: 55px;
     text-align: center;
-    padding: 16px 40px;
+    padding: 16px 36px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*--------------------------------------------------стили для video --------------------------------------------------*/
@@ -917,7 +1005,7 @@ input[type='radio'].visually-hidden {
     background: url("../images/form-bg.jpg") center center no-repeat;
 }
 
-.footer-main-form__title {
+.footer-main-form-block__title {
     color: #ffffff;
     font-size: 23px;
     font-weight: 700;
@@ -1142,7 +1230,7 @@ input[type='radio'].visually-hidden {
     width: 170px;
 }
 
-.footer-bottom-socials__text {
+.footer-bottom-socials-text {
     color: #ffffff;
     font-size: 14px;
     font-weight: 400;
@@ -1169,4 +1257,143 @@ input[type='radio'].visually-hidden {
 
 .footer-bottom-socials__youtube {
     background: url("../images/youtube.svg") center center no-repeat;
+}
+
+/*---------------------------------------------------модальное окно------------------------------------------------------*/
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.modal {
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    z-index: 101;
+    display: none;
+    width: 395px;
+    height: 415px;
+    padding: 63px 70px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: -5px;
+    background: url("../images/form-bg.jpg") center center no-repeat;
+}
+
+.modal__title {
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.modal-form__input {
+    display: block;
+    height: 23px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    padding: 10px;
+    margin-bottom: 26px;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+    position: relative;
+}
+
+/*.modal-form__input:last-child {*/
+    /*margin-bottom: 50px;*/
+/*}*/
+
+.modal-form__input::-webkit-input-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-form__input:-moz-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-form__input::-moz-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-form__input:-ms-input-placeholder {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.modal-form__input:focus::-webkit-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.modal-form__input:focus:-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.modal-form__input:focus::-moz-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.modal-form__input:focus:-ms-input-placeholder {
+    opacity:0;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+}
+
+.modal-form__btn {
+    width: 255px;
+    height: 57px;
+    box-shadow: 0 0 15px 12px rgba(255, 255, 255, 0.48);
+    border-radius: 33px;
+    background-color: #ffffff;
+    color: #c2529a;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    padding: 16px 40px;
+    outline: none;
+}
+
+.modal-form__btn:hover {
+    cursor: pointer;
+}
+
+.error {
+    color: #FF0000;
+    font-size: 10px;
+    /*position: absolute;*/
+    /*right: 50px;*/
 }

@@ -11,10 +11,10 @@
             <a href="index.html" class="header-logo">Pantheon<span class="header-logo__span">project</span></a>
             <div class="header-menu-block">
                 <a href="#" class="header-menu-block__span">Меню
-                    <span class="header-burger">
-                        <span class="header-burger__line"></span>
-                        <span class="header-burger__line"></span>
-                        <span class="header-burger__line"></span>
+                    <span class="header-burger js-burger">
+                        <span class="header-burger__line js-line-main"></span>
+                        <span class="header-burger__line js-line-middle"></span>
+                        <span class="header-burger__line js-line-main"></span>
                     </span>
                 </a>
             </div>
@@ -27,42 +27,42 @@
                     <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
                 </div>
             </div>
-            <a href="#about-mars" class="header-button"></a>
+            <a href="#about-mars" class="header-button js-header-button"></a>
         </header>
-        <div class="header-menu">
+        <div class="header-menu js-menu">
             <nav>
                 <ul>
-                    <li class="header-menu__item"><a href="#header" class="header-menu-item__link">Главная</a></li>
-                    <li class="header-menu__item"><a href="#about" class="header-menu-item__link">О Марсе</a></li>
-                    <li class="header-menu__item"><a href="#schedule" class="header-menu-item__link">От идеи до реализации</a></li>
-                    <li class="header-menu__item"><a href="#lessons" class="header-menu-item__link">Подводные камни в масштабах космоса</a></li>
-                    <li class="header-menu__item"><a href="#reviews" class="header-menu-item__link">Организация жизни в колонии</a></li>
-                    <li class="header-menu__item"><a href="#contacts" class="header-menu-item__link">Когда вылетаем?</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#header" class="header-menu-item__link">Главная</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#about-mars" class="header-menu-item__link">О Марсе</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#realization" class="header-menu-item__link">От идеи до реализации</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#video" class="header-menu-item__link">Подводные камни в масштабах космоса</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#life" class="header-menu-item__link">Организация жизни в колонии</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#footer" class="header-menu-item__link">Когда вылетаем?</a></li>
                 </ul>
             </nav>
         </div>
         <div class="tizers">
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">4</div>
                 <p class="tizers-item__text">четвертая планета по удаленности от Солнца</p>
             </div>
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">7</div>
                 <p class="tizers-item__text">седьмая по размерам планета Солнечной системы</p>
             </div>
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">10,7%</div>
                 <p class="tizers-item__text">массы Земли (ваш вес будет в 3 раза меньшe, чем на Земле)</p>
             </div>
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">2</div>
                 <p class="tizers-item__text">спутника вместо Луны (как картошка, только больше)</p>
             </div>
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">21 км</div>
                 <p class="tizers-item__text">высота самой высокой горы Марса</p>
             </div>
-            <div class="tizers-item">
+            <div class="tizers-item wow fadeInLeftBig">
                 <div class="tizers-item__number">+20</div>
                 <p class="tizers-item__text">максимальная температура на поверхности</p>
             </div>
@@ -84,7 +84,7 @@
             <div class="about-mars-rocket"></div>
             <div class="about-mars-mars"></div>
         </div>
-        <div class="realization">
+        <div id="realization" class="realization">
             <h2 class="realization-title title">От идеи до реализации</h2>
             <div class="realization-main">
                 <div class="realization-main-text">
@@ -110,12 +110,12 @@
                     <div class="realization-fly-cost">
                         <span class="realization-fly-cost__price">$500 k</span>
                         <span class="realization-fly-cost__text">и ты на Марсе!</span>
-                        <a href="#" class="realization-fly-cost__btn">Я готов лететь</a>
+                        <a href="#js-modal-form" class="realization-fly-cost__btn js-show-modal">Я готов лететь</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="video">
+        <div id="video" class="video">
             <h2 class="video-title title">Подводные камни в масштабах космоса</h2>
             <div class="video-block">
                 <iframe width="1140" height="572" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
@@ -139,7 +139,7 @@
                 </div>
             </div>
         </div>
-        <div class="life">
+        <div id="life" class="life">
             <h2 class="life-title title">Организация жизни в колонии</h2>
             <div class="life-tabs">
                 <ul class="life-tabs-list">
@@ -159,11 +159,11 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
+        <footer id="footer" class="footer">
             <h2 class="footer-title title">Деньги приготовил. Когда вылетаем?</h2>
             <div class="footer-main">
                 <div class="footer-main-form-block">
-                    <h3 class="footer-main-form__title">Будь в курсе новостей</h3>
+                    <h3 class="footer-main-form-block__title">Будь в курсе новостей</h3>
                     <form action="#" class="footer-main-form">
                         <input type="text" placeholder="Имя" class="footer-main-form__input">
                         <input type="email" placeholder="E-mail" class="footer-main-form__input">
@@ -181,7 +181,7 @@
                 <a href="#" class="footer-bottom-logo">Pantheon<span class="footer-bottom-logo__span">project</span></a>
                 <a href="#header" class="footer-bottom__link">Подробнее о проекте</a>
                 <div class="footer-bottom-socials-wrap">
-                    <span class="footer-bottom-socials__text">Следуйте за нами</span>
+                    <span class="footer-bottom-socials-text">Следуйте за нами</span>
                     <div class="footer-bottom-socials">
                         <a href="#" class="footer-bottom-socials__link footer-bottom-socials__vk"><span class="visually-hidden">vkontakte</span></a>
                         <a href="#" class="footer-bottom-socials__link footer-bottom-socials__twitter"><span class="visually-hidden">twitter</span></a>
@@ -191,6 +191,26 @@
                 </div>
             </div>
         </footer>
+        <div class="modal js-modal" id="js-modal-form">
+            <h3 class="modal__title">Заполните форму</h3>
+            <form action="#" class="modal-form" id="js-register-form">
+                <div class="modal-form-message js-form-message"></div>
+                <div class="wrap">
+                    <span class="error"></span>
+                    <input type="text" placeholder="Ваше имя" name="form_name" class="modal-form__input modal-form__name">
+                </div>
+                <div class="wrap">
+                    <span class="error"></span>
+                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="modal-form__input modal-form__email">
+                </div>
+                <div class="wrap">
+                    <span class="error"></span>
+                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="modal-form__input modal-form__tel">
+                </div>
+                <button type="submit" class="modal-form__btn">Отправить заявку</button>
+            </form>
+        </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
