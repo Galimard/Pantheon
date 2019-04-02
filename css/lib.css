@@ -891,7 +891,7 @@ input[type='radio'].visually-hidden {
 .footer {
     display: grid;
     grid-template-rows: 245px 415px 200px;
-    background: url("../images/Layer_2.jpg") center center no-repeat;
+    background: /*url("../images/Layer_2.jpg") center center no-repeat,*/ url("../images/bg.jpg") center center no-repeat;
     padding: 0 14.5%;
 }
 
@@ -901,8 +901,9 @@ input[type='radio'].visually-hidden {
 }
 
 .footer-main {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 390px 676px;
+    grid-gap: 70px;
 }
 
 .footer-main-form-block {
@@ -913,6 +914,7 @@ input[type='radio'].visually-hidden {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin-left: -5px;
+    background: url("../images/form-bg.jpg") center center no-repeat;
 }
 
 .footer-main-form__title {
@@ -1011,10 +1013,6 @@ input[type='radio'].visually-hidden {
     padding: 16px 40px;
 }
 
-.footer-main-text {
-    margin-left: 69px;
-}
-
 .footer-main-form__btn:hover {
     cursor: pointer;
 }
@@ -1031,7 +1029,39 @@ input[type='radio'].visually-hidden {
     color: #ffffff;
     font-size: 16px;
     font-weight: 400;
-    border-bottom: 1px solid #ffffff;
+    position: relative;
+}
+
+.footer-main-text__link::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    background: #ffffff;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.footer-main-text__link:hover::after {
+    width: 0;
+}
+
+.footer-bottom {
+    display: grid;
+    grid-template-columns: 416px 403px 317px;
+    align-items: center;
+    padding-top: 65px;
 }
 
 .footer-bottom-logo {
@@ -1041,7 +1071,6 @@ input[type='radio'].visually-hidden {
     text-transform: uppercase;
     letter-spacing: 0.6px;
     padding-left: 49px;
-    padding-top: 40px;
     position: relative;
 }
 
@@ -1052,7 +1081,7 @@ input[type='radio'].visually-hidden {
     height: 32px;
     background: url("../images/logo-white.svg") center center no-repeat;
     position: absolute;
-    top: 40px;
+    top: 0;
     left: 0;
 }
 
@@ -1071,6 +1100,7 @@ input[type='radio'].visually-hidden {
     font-weight: 400;
     letter-spacing: 0.35px;
     position: relative;
+    width: 148px;
 }
 
 .footer-bottom__link::after {
