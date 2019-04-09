@@ -10,8 +10,8 @@
         <header id="header" class="header">
             <a href="index.html" class="header-logo">Pantheon<span class="header-logo__span">project</span></a>
             <div class="header-menu-block">
-                <a href="#" class="header-menu-block__span">Меню
-                    <span class="header-burger js-burger">
+                <a href="#" class="header-menu-block__link js-burger"><span class="header-menu-block__span">Меню</span>
+                    <span class="header-burger">
                         <span class="header-burger__line js-line-main"></span>
                         <span class="header-burger__line js-line-middle"></span>
                         <span class="header-burger__line js-line-main"></span>
@@ -19,10 +19,10 @@
                 </a>
             </div>
             <div class="header-main">
-                <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span>Пантеон<br><span class="header-main-title__bold">Марс</span></h1>
+                <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>
                 <div class="header-video">
                     <div class="header-video-block">
-                        <iframe width="580" height="290" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
+                        <iframe width="300" height="140" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
                     </div>
                     <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
                 </div>
@@ -41,32 +41,32 @@
                 </ul>
             </nav>
         </div>
-        <div class="tizers">
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">4</div>
-                <p class="tizers-item__text">четвертая планета по удаленности от Солнца</p>
+        <div class="tizers js-scroll">
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">4</div>
+                    <p class="tizers-item__text">четвертая планета по удаленности от Солнца</p>
+                </div>
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">7</div>
+                    <p class="tizers-item__text">седьмая по размерам планета Солнечной системы</p>
+                </div>
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">10,7%</div>
+                    <p class="tizers-item__text">массы Земли (ваш вес будет в 3 раза меньшe, чем на Земле)</p>
+                </div>
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">2</div>
+                    <p class="tizers-item__text">спутника вместо Луны (как картошка, только больше)</p>
+                </div>
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">21 км</div>
+                    <p class="tizers-item__text">высота самой высокой горы Марса</p>
+                </div>
+                <div class="tizers-item wow fadeInLeftBig">
+                    <div class="tizers-item__number">+20</div>
+                    <p class="tizers-item__text">максимальная температура на поверхности</p>
+                </div>
             </div>
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">7</div>
-                <p class="tizers-item__text">седьмая по размерам планета Солнечной системы</p>
-            </div>
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">10,7%</div>
-                <p class="tizers-item__text">массы Земли (ваш вес будет в 3 раза меньшe, чем на Земле)</p>
-            </div>
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">2</div>
-                <p class="tizers-item__text">спутника вместо Луны (как картошка, только больше)</p>
-            </div>
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">21 км</div>
-                <p class="tizers-item__text">высота самой высокой горы Марса</p>
-            </div>
-            <div class="tizers-item wow fadeInLeftBig">
-                <div class="tizers-item__number">+20</div>
-                <p class="tizers-item__text">максимальная температура на поверхности</p>
-            </div>
-        </div>
         <div id="about-mars" class="about-mars">
             <h2 class="about-mars-title title">Марс. Вспомнить всё.</h2>
             <div class="about-mars-block">
@@ -80,13 +80,18 @@
                     Чтобы преодалеть такое расстояние, нужно лететь
                     на межпланетоном корабле 7-8 месяцев.</p>
             </div>
-            <div class="about-mars-earth"></div>
-            <div class="about-mars-rocket"></div>
-            <div class="about-mars-mars"></div>
+            <!--<div class="about-mars-animation">-->
+                <div class="about-mars-animation__earth"></div>
+                <div class="about-mars-animation__rocket"></div>
+                <div class="about-mars-animation__mars"></div>
+            <!--</div>-->
         </div>
         <div id="realization" class="realization">
             <h2 class="realization-title title">От идеи до реализации</h2>
             <div class="realization-main">
+                <div class="realization-main__img">
+                    <img src="images/elon1.jpg" alt="elon">
+                </div>
                 <div class="realization-main-text">
                     <h3 class="realization-main-text__title">Илон Маск. Гений или безумец?</h3>
                     <p class="realization-main-text__text">
@@ -97,9 +102,6 @@
                         Илон поставил перед собой цель: скоратить стоимость вывода кораблей
                         в космос в 10 раз, что станет первым шагом для человечества в освоении Марса.
                     </p>
-                </div>
-                <div class="realization-main__img">
-                    <img src="images/elon1.jpg" alt="elon">
                 </div>
             </div>
             <div class="realization-fly">
@@ -118,25 +120,73 @@
         <div id="video" class="video">
             <h2 class="video-title title">Подводные камни в масштабах космоса</h2>
             <div class="video-block">
-                <iframe width="1140" height="572" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
+                <iframe width="290" height="172" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
+                <!--<iframe width="1140" height="572" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>-->
             </div>
             <div class="video-tabs">
-                <ul class="video-tabs-list">
-                    <li class="video-tabs-list__item"><a href="#" class="video-tabs-list__link video-tabs-list__link--active">Жить или выживать?</a></li>
-                    <li class="video-tabs-list__item"><a href="#" class="video-tabs-list__link">Готовы ли технологии?</a></li>
-                    <li class="video-tabs-list__item"><a href="#" class="video-tabs-list__link">Путешествие на грани
-                        фантастики</a></li>
-                    <li class="video-tabs-list__item"><a href="#" class="video-tabs-list__link">Жизнь на Марсе</a></li>
+                <ul class="tabs-list">
+                    <li class="tabs-list__item">
+                        <input type="radio" name="tabs" id="tab-1" checked class="tabs__title-input">
+                        <label for="tab-1" class="tabs__title">Жить или выживать?</label>
+                        <div class="video-tabs-block">
+                            <h3 class="video-tabs-block__title">Жить или выживать?</h3>
+                            <p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
+                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
+                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
+                                <br><br>
+                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
+                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
+                        </div>
+                    </li>
+                    <li class="tabs-list__item">
+                        <input type="radio" name="tabs" id="tab-2" checked class="tabs__title-input">
+                        <label for="tab-2" class="tabs__title">Готовы ли технологии?</label>
+                        <div class="video-tabs-block">
+                            <h3 class="video-tabs-block__title">Готовы ли технологии?</h3>
+                            <p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
+                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
+                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
+                                <br><br>
+                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
+                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
+                        </div>
+                    </li>
+                    <li class="tabs-list__item">
+                        <input type="radio" name="tabs" id="tab-3" checked class="tabs__title-input">
+                        <label for="tab-3" class="tabs__title">Путешествие на грани фантастики</label>
+                        <div class="video-tabs-block">
+                            <h3 class="video-tabs-block__title">Путешествие на грани фантастики</h3>
+                            <p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
+                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
+                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
+                                <br><br>
+                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
+                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
+                        </div>
+                    </li>
+                    <li class="tabs-list__item">
+                        <input type="radio" name="tabs" id="tab-4" checked class="tabs__title-input">
+                        <label for="tab-4" class="tabs__title">Жизнь на Марсе</label>
+                        <div class="video-tabs-block">
+                            <h3 class="video-tabs-block__title">Жизнь на Марсе</h3>
+                            <p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
+                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
+                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
+                                <br><br>
+                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
+                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
+                        </div>
+                    </li>
                 </ul>
-                <div class="video-tabs-block">
-                    <h3 class="video-tabs-block__title">Жить или выживать?</h3>
-                    <p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
-                        Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
-                        по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
-                        <br><br>
-                        На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
-                        при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
-                </div>
+                <!--<div class="video-tabs-block">-->
+                    <!--<h3 class="video-tabs-block__title">Жить или выживать?</h3>-->
+                    <!--<p class="video-tabs-block__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>-->
+                        <!--Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год-->
+                        <!--по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.-->
+                        <!--<br><br>-->
+                        <!--На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация-->
+                        <!--при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>-->
+                <!--</div>-->
             </div>
         </div>
         <div id="life" class="life">

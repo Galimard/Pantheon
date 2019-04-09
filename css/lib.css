@@ -220,7 +220,7 @@ input[type='radio'].visually-hidden {
     cursor: pointer;
 }
 
-.header-menu-block__span {
+.header-menu-block__link {
     color: #ffffff;
     font-size: 18px;
     font-weight: 400;
@@ -228,7 +228,7 @@ input[type='radio'].visually-hidden {
     position: relative;
 }
 
-.header-menu-block__span::after {
+.header-menu-block__link::after {
     content: '';
     display: inline-block;
     height: 1px;
@@ -249,7 +249,7 @@ input[type='radio'].visually-hidden {
     transform: translateX(-50%);
 }
 
-.header-menu-block__span:hover::after {
+.header-menu-block__link:hover::after {
     width: 100%;
 }
 
@@ -284,8 +284,8 @@ input[type='radio'].visually-hidden {
     margin-bottom: 0;
 }
 
-.header-burger:hover .header-burger__line:not(.burger-line2):nth-child(1),
-.header-burger:hover .header-burger__line:not(.burger-line2):nth-child(3){
+.header-menu-block__link:hover .header-burger__line:not(.burger-line2):nth-child(1),
+.header-menu-block__link:hover .header-burger__line:not(.burger-line2):nth-child(3){
     transform: rotate(-4deg) scaleY(1.1);
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
@@ -293,7 +293,7 @@ input[type='radio'].visually-hidden {
     -o-transition: transform 0.3s ease;
     transition: transform 0.3s ease;
 }
-.header-burger:hover .header-burger__line:not(.burger-line3):nth-child(2){
+.header-menu-block__link:hover .header-burger__line:not(.burger-line3):nth-child(2){
     transform: rotate(4deg) scaleY(1.1);
     -webkit-transition: transform 0.3s ease;
     -moz-transition: transform 0.3s ease;
@@ -335,7 +335,7 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 100px;
     right: 263px;
-    background: rgba(210, 58, 115, 0.7);
+    background: rgba(210, 58, 115, 0.9);
     border-radius: 4px;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
 }
@@ -413,8 +413,8 @@ input[type='radio'].visually-hidden {
 }
 
 .header-video-block {
-    width: 580px;
-    height: 290px;
+    width: 100%;
+    height: 100%; /*290*/
     overflow: hidden;
     margin: 50px auto 0;
     box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.4);
@@ -460,7 +460,7 @@ input[type='radio'].visually-hidden {
 
 .tizers {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(135px,1fr));
     align-items: center;
     grid-gap: 63px;
     height: 210px; /*delete*/
@@ -550,7 +550,11 @@ input[type='radio'].visually-hidden {
     line-height: 24px;
 }
 
-.about-mars-earth {
+.about-mars-animation {
+    position: relative;
+}
+
+.about-mars-animation__earth {
     width: 152px;
     height: 152px;
     background: url("../images/Earth.svg") center center no-repeat;
@@ -559,7 +563,7 @@ input[type='radio'].visually-hidden {
     left: 750px;
 }
 
-.about-mars-rocket {
+.about-mars-animation__rocket {
     width: 55px;
     height: 44px;
     background: url("../images/rocket.svg") center center no-repeat;
@@ -568,7 +572,7 @@ input[type='radio'].visually-hidden {
     right: 495px;
 }
 
-.about-mars-mars {
+.about-mars-animation__mars {
     width: 88px;
     height: 88px;
     background: url("../images/Mars.svg") center center no-repeat;
@@ -581,9 +585,10 @@ input[type='radio'].visually-hidden {
 
 .realization {
     display: grid;
-    grid-template-rows: 240px 440px 505px; /*more 100px*/
+    grid-template-rows: 240px auto auto; /*more 100px*/
+    grid-template-columns: 100%;
     grid-gap: 0 60px;
-    padding: 0 14.5%;
+    padding: 0 14.5% 80px;
 }
 
 .realization-title {
@@ -592,8 +597,9 @@ input[type='radio'].visually-hidden {
 
 .realization-main {
     display: grid;
-    grid-template-columns: 700px 380px;
+    grid-template-columns: minmax(495px, 700px) minmax(200px, 380px);
     grid-gap: 60px;
+    margin-bottom: 50px;
 }
 
 .realization-main-text__title {
@@ -631,7 +637,9 @@ input[type='radio'].visually-hidden {
 }
 
 .realization-main__img {
-    width: 325px;
+    grid-column: 2/3;
+    max-width: 325px;
+    min-width: 165px;
     height: 373px;
     position: relative;
     top: 45px;
@@ -642,21 +650,26 @@ input[type='radio'].visually-hidden {
     max-width: 100%;
 }
 
-.realization-main__img::after {
-    content: "";
-    display: block;
-    width: 325px;
-    height: 373px;
-    border: 10px solid #e12457;
-    z-index: -1;
-    top: -45px;
-    right: -50px;
-    position: absolute;
+/*.realization-main__img::after {*/
+    /*content: "";*/
+    /*display: block;*/
+    /*width: 325px;*/
+    /*height: 373px;*/
+    /*border: 10px solid #e12457;*/
+    /*z-index: -1;*/
+    /*top: -45px;*/
+    /*right: -50px;*/
+    /*position: absolute;*/
+/*}*/
+
+.realization-main-text {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
 
 .realization-fly {
     display: grid;
-    grid-template-columns: 340px 740px;
+    grid-template-columns: minmax(300px, 340px) minmax(420px, 740px);
     grid-gap: 63px;
     margin-top: 50px;
     height: 308px;
@@ -671,8 +684,8 @@ input[type='radio'].visually-hidden {
 
 .realization-fly-block {
     color: #ffffff;
-    padding-top: 60px;
-    padding-right: 60px;
+    padding-top: 7%;
+    padding-right: 7%;
 }
 
 .realization-fly-block__title {
@@ -706,13 +719,14 @@ input[type='radio'].visually-hidden {
 .realization-fly-cost__text {
     font-size: 24px;
     font-weight: 100;
+    margin-right: 50px;
 }
 
 .realization-fly-cost__text::after {
     content: "";
     display: block;
     height: 1px;
-    width: 210px;
+    width: 130%;
     background: #ffffff;
 }
 
@@ -753,17 +767,17 @@ input[type='radio'].visually-hidden {
     justify-content: flex-start;
 }
 
-.video-tabs-list {
+.tabs-list {
     width: 185px;
     margin-right: 105px;
 }
 
-.video-tabs-list__item {
+.tabs-list__item {
     margin-bottom: 50px;
     position: relative;
 }
 
-.video-tabs-list__item::after {
+.tabs-list__item::after {
     content: '';
     display: block;
     width: 9px;
@@ -824,81 +838,81 @@ input[type='radio'].visually-hidden {
     justify-content: space-between;
 }
 
-.life-tabs-list {
-    width: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+/*.life-tabs-list {*/
+    /*width: 150px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+/*}*/
 
-.life-tabs-list__item {
-    -webkit-transform: rotate(-90deg);
-    -moz-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    position: relative;
-}
+/*.life-tabs-list__item {*/
+    /*-webkit-transform: rotate(-90deg);*/
+    /*-moz-transform: rotate(-90deg);*/
+    /*-ms-transform: rotate(-90deg);*/
+    /*-o-transform: rotate(-90deg);*/
+    /*transform: rotate(-90deg);*/
+    /*position: relative;*/
+/*}*/
 
-.life-tabs-list__item::before {
-    content: "";
-    display: block;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
-}
+/*.life-tabs-list__item::before {*/
+    /*content: "";*/
+    /*display: block;*/
+    /*width: 30px;*/
+    /*height: 30px;*/
+    /*position: absolute;*/
+    /*-webkit-transform: rotate(90deg);*/
+    /*-moz-transform: rotate(90deg);*/
+    /*-ms-transform: rotate(90deg);*/
+    /*-o-transform: rotate(90deg);*/
+    /*transform: rotate(90deg);*/
+/*}*/
 
-.life-tabs-list__item--active {
+/*.life-tabs-list__item--active {*/
 
-}
+/*}*/
 
-.life-tabs-list__live::before {
-    background: url("../images/Teacup.svg") center center no-repeat;
-    top: -2px;
-    right: -13px;
-}
+/*.life-tabs-list__live::before {*/
+    /*background: url("../images/Teacup.svg") center center no-repeat;*/
+    /*top: -2px;*/
+    /*right: -13px;*/
+/*}*/
 
-.life-tabs-list__work::before {
-    background: url("../images/Helmet.svg") center center no-repeat;
-    top: -2px;
-    right: 40px;
-}
+/*.life-tabs-list__work::before {*/
+    /*background: url("../images/Helmet.svg") center center no-repeat;*/
+    /*top: -2px;*/
+    /*right: 40px;*/
+/*}*/
 
-.life-tabs-list__search::before {
-    background: url("../images/Microscope.svg") center center no-repeat;
-    top: -2px;
-    right: -37px;
-}
+/*.life-tabs-list__search::before {*/
+    /*background: url("../images/Microscope.svg") center center no-repeat;*/
+    /*top: -2px;*/
+    /*right: -37px;*/
+/*}*/
 
-.life-tabs-list__photo::before {
-    background: url("../images/Photo.svg") center center no-repeat;
-    top: -2px;
-    right: -37px;
-}
+/*.life-tabs-list__photo::before {*/
+    /*background: url("../images/Photo.svg") center center no-repeat;*/
+    /*top: -2px;*/
+    /*right: -37px;*/
+/*}*/
 
-.life-tabs-list__agric::before {
-    background: url("../images/Leaves.svg") center center no-repeat;
-    top: -2px;
-    right: -15px;
-}
+/*.life-tabs-list__agric::before {*/
+    /*background: url("../images/Leaves.svg") center center no-repeat;*/
+    /*top: -2px;*/
+    /*right: -15px;*/
+/*}*/
 
-.life-tabs-list__link {
-    display: inline-block;
-    color: #e12457;
-    font-size: 20px;
-    font-weight: 700;
-    opacity: 0;
-}
+/*.life-tabs-list__link {*/
+    /*display: inline-block;*/
+    /*color: #e12457;*/
+    /*font-size: 20px;*/
+    /*font-weight: 700;*/
+    /*opacity: 0;*/
+/*}*/
 
-.life-tabs-list__link--active {
-    opacity: 1;
-    /*margin-left: 300px;*/
-}
+/*.life-tabs-list__link--active {*/
+    /*opacity: 1;*/
+    /*!*margin-left: 300px;*!*/
+/*}*/
 
 
 
@@ -1309,7 +1323,7 @@ input[type='radio'].visually-hidden {
 }
 
 /*.modal-form__input:last-child {*/
-    /*margin-bottom: 50px;*/
+/*margin-bottom: 50px;*/
 /*}*/
 
 .modal-form__input::-webkit-input-placeholder {
@@ -1397,7 +1411,52 @@ input[type='radio'].visually-hidden {
     /*right: 50px;*/
 }
 
-/*-------------------------------------adaptiv-------------------------------------------------------*/
+/*-------------------------------------media screen-------------------------------------------------------*/
+
+@media all and (max-width: 1500px) {
+
+    .tizers {
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .realization {
+        grid-template-rows: 240px auto minmax(470px, auto);
+        padding: 0 14.5%;
+    }
+
+    .realization-main {
+        margin-bottom: 100px;
+    }
+
+    .realization-fly {
+        background: url("../images/bg2-medium.png") center center no-repeat;
+        background-size: cover;
+        max-width: 720px;
+        min-height: 377px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .realization-fly__img {
+        top: -50px;
+        left: 50px;
+        float: left;
+        width: 253px;
+        margin-right: 120px;
+    }
+
+    .realization-fly-block {
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+
+    .realization-fly-cost {
+        width: 100%;
+        padding: 0 2%;
+    }
+
+}
 
 @media all and (max-width: 1240px) {
 
@@ -1407,6 +1466,10 @@ input[type='radio'].visually-hidden {
 
     .header-video__text {
         right: -130px;
+    }
+
+    .header-menu {
+        right: 10%;
     }
 
 }
@@ -1434,7 +1497,322 @@ input[type='radio'].visually-hidden {
 
     .header-video__text {
         top: 255px;
-        right: 55px;
+        right: 40px;
     }
 
+    .about-mars, .realization {
+        padding: 0 9%;
+    }
+
+    .about-mars-block {
+        margin-right: 0;
+    }
+
+}
+
+@media all and (max-width: 900px) {
+
+    .title {
+        font-size: 48px;
+    }
+
+    .about-mars-block {
+        padding-right: 0;
+    }
+
+    .realization-main {
+        display: block;
+    }
+
+    .realization-main__img {
+        float: right;
+        max-width: 165px;
+        margin-left: 30px;
+        margin-bottom: 65px;
+        top: 85px;
+        height: auto;
+    }
+
+}
+
+@media all and (max-width: 800px) {
+
+    .header-main-title__bold {
+        font-size: 157px;
+    }
+
+    .header-main-title {
+        font-size: 30px;
+    }
+
+    .header-button {
+        margin: 20px auto 0;
+        grid-column: 1/-1;
+    }
+
+    .header-video {
+        max-width: 535px;
+    }
+
+}
+
+@media all and (max-width: 770px) {
+
+    .realization-fly-cost__text {
+        margin-right: 0;
+    }
+
+    .realization-fly-cost__text::after {
+        width: 100%;
+    }
+
+}
+
+@media all and (max-width: 750px) {
+
+    .header {
+        background: url("../images/bg-medium.jpg") center center no-repeat;
+        height: 940px;
+        padding: 0 4%;
+    }
+
+    .about-mars {
+        background: url("../images/bg-rocket.png") center bottom no-repeat;
+        grid-gap: 0 30px;
+        padding: 0 4% 20%;
+        background-size: 100%;
+    }
+
+    .about-mars-animation__earth, .about-mars-animation__rocket, .about-mars-animation__mars {
+        display: none;
+    }
+
+    .realization {
+        padding: 0 4%;
+    }
+
+    .realization-main-text__span::before {
+        top: -20px;
+        left: -5px;
+    }
+
+}
+
+@media all and (max-width: 690px) {
+
+    .realization {
+        padding: 0;
+    }
+
+    .realization-title {
+        padding: 130px 4% 0;
+    }
+
+    .realization-fly {
+        height: auto;
+        padding: 0 5%;
+    }
+
+    .realization-fly__img {
+        float: none;
+        position: static;
+        margin: -126px auto 0;
+        display: block;
+    }
+
+    .realization-main {
+        margin-bottom: 170px;
+        padding: 0 4%;
+    }
+
+    .realization-fly-cost {
+        display: block;
+    }
+
+    .realization-fly-cost > span, .realization-fly-cost > a {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .realization-fly-cost__price {
+        line-height: 50px;
+    }
+
+    .realization-fly-cost__text {
+        width: 220px;
+        line-height: 19px;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+
+    .title {
+        font-size: 36px;
+    }
+
+    .header {
+        height: 850px;
+        grid-template-rows: 100px 580px 140px;
+    }
+
+    .header-logo {
+        font-size: 17px;
+    }
+
+    .header-logo__span {
+        font-size: 12px;
+    }
+
+    .header-menu-block__span {
+        display: none;
+    }
+
+    .header-main {
+        padding-top: 73px;
+    }
+
+    .header-main-title {
+        font-size: 13px;
+    }
+
+    .header-main-title__bold {
+        font-size: 70px;
+    }
+
+    .header-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .header-menu {
+        right: 2%;
+    }
+
+    .header-burger {
+        top: 23px;
+    }
+
+    .header-main-title {
+        letter-spacing: 0.5px;
+    }
+
+    .header-main-title__bold {
+        line-height: 80px;
+    }
+
+    .tizers {
+        padding-left: 50px;
+    }
+
+    .tizers-item__number {
+        font-size: 36px;
+    }
+
+    .about-mars {
+        grid-template-rows: 85px auto auto;
+        grid-template-columns: 1fr;
+        padding: 0 4% 55%;
+    }
+
+    .about-mars-title {
+        margin-top: 40px;
+    }
+
+    .about-mars-block {
+        margin-top: 30px;
+    }
+
+    .about-mars-block__title {
+        margin-bottom: 10px;
+    }
+
+    .realization {
+        grid-template-rows: 210px auto auto;
+    }
+
+    .realization-main {
+        position: relative;
+    }
+
+    .realization-main__img {
+        float: none;
+        position: absolute;
+        margin: 0;
+        top: 32%;
+        left: 50%;
+        transform: translateX(-82.5px);
+    }
+
+    .realization-main-text__span {
+        margin: 280px 0 30px;
+    }
+}
+
+@media all and (max-width: 432px) {
+
+    .realization {
+        grid-template-rows: 230px auto auto;
+    }
+
+    .realization-title {
+        padding-top: 120px;
+        line-height: 37px;
+    }
+
+}
+
+@media all and (max-width: 420px) {
+
+    .about-mars {
+        grid-template-rows: 120px auto auto;
+    }
+
+    .realization-main__img {
+        top: 34%;
+    }
+}
+
+@media all and (max-width: 350px) {
+
+    .header {
+        background: url("../images/bg-mobile.jpg") center center no-repeat;
+        height: 579px;
+        grid-template-rows: 100px 370px 115px;
+    }
+
+    .header-logo, .header-menu-block {
+        padding-top: 20px;
+    }
+
+    .header-logo::before {
+        top: 15px;
+    }
+
+    .header-main {
+        height: 43px;
+    }
+
+    .header-video {
+        margin: -15px auto 0;
+    }
+
+    .header-video__text {
+        top: 135px;
+    }
+
+    .about-mars {
+        background: url("../images/bg-rocket-small.png") center bottom no-repeat;
+        background-size: 100%;
+    }
+
+    .realization-fly {
+        background: url("../images/bg2-mobile.jpg") center center no-repeat;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .realization-fly-cost__btn {
+        width: 100%;
+    }
 }
