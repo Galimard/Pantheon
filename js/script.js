@@ -209,4 +209,80 @@ $(document).ready(function() {
         });
     }
 
+    //=====================вкладки для блока life-tabs========================//
+
+    //разметка табов состоит из двух списков, по котором можно кликать - кругляши и иконки, поэтому необходимо с помощью функции getClickItem искать соответствующий элемент из второго списка
+    //клик на кругляш
+    $('.life-tabs-controls__item').on('click', function() {
+        //кликнутые элементы из второго списка - item, ссылка
+        var clickedItem = getClickItem(this)[0], //кликнутый элемент из первого списка
+               clickedLink = $(clickedItem).children("a"), //ссылка из другого списка
+               clickedTab = getClickItem(clickedItem)[1]; //соответствующая вкладка
+
+        // активный кругляшок
+        $('.life-tabs-controls__item').removeClass('life-tabs-controls__item--active');
+        $(this).addClass('life-tabs-controls__item--active');
+
+        // активная надпись(появляется)
+        $('.life-tabs-list__link').removeClass('life-tabs-list__link--active');
+        $(clickedLink).addClass('life-tabs-list__link--active');
+
+        // активный пункт(поднимается наверх)
+        $('.life-tabs-list__item').removeClass('life-tabs-list__item--active');
+        $(clickedItem).addClass('life-tabs-list__item--active');
+
+        //переключение вкладки
+        $('.life-tabs-block__item').removeClass('life-tabs-block__item--active');
+        $(clickedTab).addClass('life-tabs-block__item--active');
+
+    });
+
+    //клик на иконку
+    $('.life-tabs-list__icon').on('click', function () {
+
+        var clickedItem = $(this).parent()[0], //кликнутый элемент из текущего списка, т.к. иконка - не элемент списка
+               clickedItem2 = getClickItem(clickedItem)[0], //кликнутый элемент из второго списка - item
+               clickedLink = $(this).siblings(), //ссылка рядом с кликнутой иконкой
+               clickedTab = getClickItem(clickedItem)[1]; //соответствующая вкладка
+
+        // активный кругляшок
+        $('.life-tabs-controls__item').removeClass('life-tabs-controls__item--active');
+        $(clickedItem2).addClass('life-tabs-controls__item--active');
+
+        // активная надпись(появляется)
+        $('.life-tabs-list__link').removeClass('life-tabs-list__link--active');
+        $(clickedLink).addClass('life-tabs-list__link--active');
+
+        // активный пункт(поднимается наверх)
+        $('.life-tabs-list__item').removeClass('life-tabs-list__item--active');
+        $(clickedItem).addClass('life-tabs-list__item--active');
+
+        //активная вкладка
+        $('.life-tabs-block__item').removeClass('life-tabs-block__item--active');
+        $(clickedTab).addClass('life-tabs-block__item--active');
+
+    });
+
+    //находим кликнутый элемент/вкладку из другого списка
+    /* @param item {DOM elem} элемент, по которому кликнули
+        @return list[i] {DOM elem} элемент, соответствующий порядку кликнутого элемента
+    * */
+    function getClickItem(item) {
+        var list1 = $('.life-tabs-list li'), //иконки
+               list2 = $('.life-tabs-controls li'), //кругляши
+               list3 = $('.life-tabs-block__item'), //вкладки
+               result = [];
+
+        for (var i = 0; i < list1.length; i++) {
+            if (item == list2[i]) {
+                result.push(list1[i], list3[i]);
+                return result; //находим соответствующую иконку + вкладку
+            }
+            if (item == list1[i]) {
+                result.push(list2[i], list3[i]);
+                return result; //находим соответствующий кругляш + вкладку
+            }
+        }
+    }
+
 });

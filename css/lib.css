@@ -862,6 +862,7 @@ input[type='radio'].visually-hidden {
 .life {
     display: grid;
     grid-template-rows: 215px 835px;
+    /*grid-template-rows: auto minmax(175px, 570px) minmax(465px, auto);*/
     padding: 0 14.5%;
 }
 
@@ -876,11 +877,8 @@ input[type='radio'].visually-hidden {
 }
 
 .life-tabs-list {
-    /*width: 150px;*/
+    width: 150px;
     height: 685px;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: space-between;*/
 }
 
 .life-tabs-controls {
@@ -893,6 +891,7 @@ input[type='radio'].visually-hidden {
 .life-tabs-controls__item {
     position: relative; /*для псевдоэлемента*/
     margin-bottom: 100px;
+    /*transition: margin-bottom 0.5s ease;*/
 }
 
 .life-tabs-controls__item::before {
@@ -902,6 +901,7 @@ input[type='radio'].visually-hidden {
     height: 10px;
     border-radius: 50%;
     border: 3px solid #e12457;
+    background: #ffffff;
 }
 
 .life-tabs-controls__item::after {
@@ -919,8 +919,13 @@ input[type='radio'].visually-hidden {
     display: none;
 }
 
+.life-tabs-controls__item:hover::before {
+    cursor: pointer;
+}
+
 .life-tabs-controls__item--active {
     margin-bottom: 305px;
+    /*transition: margin-bottom 0.5s ease;*/
 }
 
 .life-tabs-controls__item--active::before {
@@ -935,93 +940,87 @@ input[type='radio'].visually-hidden {
 }
 
 .life-tabs-list__item {
-    /*-webkit-transform: rotate(-90deg);*/
-    /*-moz-transform: rotate(-90deg);*/
-    /*-ms-transform: rotate(-90deg);*/
-    /*-o-transform: rotate(-90deg);*/
-    /*transform: rotate(-90deg);*/
-    position: relative;
-    /*transform-origin: 0 0;*/
-    margin-bottom: 92px;
+    position: relative;/*для повернутой ссылки, псевдоэлемента*/
+    height: 116px;
+    transition: height 0.5s ease;
 }
 
-.life-tabs-list__item::before {
-    content: "";
+.life-tabs-list__icon {
     display: block;
     width: 30px;
     height: 30px;
     position: absolute;
-    /*-webkit-transform: rotate(90deg);*/
-    /*-moz-transform: rotate(90deg);*/
-    /*-ms-transform: rotate(90deg);*/
-    /*-o-transform: rotate(90deg);*/
-    /*transform: rotate(90deg);*/
+    top: -7px;
     left: 40px;
 }
 
-.life-tabs-list__live::before {
+.life-tabs-list__live {
     background: url("../images/Teacup.svg") center center no-repeat;
-    top: -7px;
-    /*right: -13px;*/
-
 }
 
-.life-tabs-list__work::before {
+.life-tabs-list__work {
     background: url("../images/Helmet.svg") center center no-repeat;
-    top: -7px;
-    /*right: 40px;*/
 }
 
-.life-tabs-list__search::before {
+.life-tabs-list__search {
     background: url("../images/Microscope.svg") center center no-repeat;
-    top: -7px;
-    /*right: -37px;*/
 }
 
-.life-tabs-list__photo::before {
+.life-tabs-list__photo {
     background: url("../images/Photo.svg") center center no-repeat;
-    top: -7px;
-    /*right: -37px;*/
 }
 
-.life-tabs-list__agric::before {
+.life-tabs-list__agric {
     background: url("../images/Leaves.svg") center center no-repeat;
-    top: -7px;
-    /*right: -15px;*/
 }
 
-.life-tabs-list__live:hover::before {
+.life-tabs-list__icon:hover {
     cursor: pointer;
 }
 
 .life-tabs-list__item--active {
-    margin-bottom: 297px;
+    height: 321px;
 }
 
 .life-tabs-list__link {
-    margin: 0 30px;
     display: inline-block;
     color: #e12457;
     font-size: 20px;
     font-weight: 700;
-    /*opacity: 0;*/
-    /*-webkit-transform: rotate(-90deg);*/
-    /*-moz-transform: rotate(-90deg);*/
-    /*-ms-transform: rotate(-90deg);*/
-    /*-o-transform: rotate(-90deg);*/
+    opacity: 0;
     transform: rotate(-90deg);
     transform-origin: 0 0;
 }
 
-/*.life-tabs-list__link--active {*/
-    /*opacity: 1;*/
-    /*!*margin-left: 300px;*!*/
-/*}*/
+.life-tabs-list__link--active {
+    opacity: 1;
+    position: absolute;
+    top: 165px;
+    left: 41px;
+}
 
+.life-tabs-list__work + .life-tabs-list__link--active {
+    top: 110px;
+}
 
+.life-tabs-list__search + .life-tabs-list__link--active {
+    top: 185px;
+}
+
+.life-tabs-list__photo + .life-tabs-list__link--active {
+    top: 125px;
+}
 
 .life-tabs-block {
     width: 985px;
+}
+
+.life-tabs-block__item {
+    display: none;
+}
+
+.life-tabs-block__item--active {
+    display: block;
 }
 
 .life-tabs-block__img-wrap {
@@ -1558,6 +1557,10 @@ input[type='radio'].visually-hidden {
     .realization-fly-cost {
         width: 100%;
         padding: 0 2%;
+    }
+
+    .life {
+        padding: 0 11.5%;
     }
 
 }
