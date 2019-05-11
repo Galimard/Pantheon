@@ -1396,6 +1396,16 @@ input[type='radio'].visually-hidden {
     z-index: 100;
 }
 
+.overlay2 {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
 .modal {
     position: fixed;
     top: 100px;
@@ -1408,9 +1418,42 @@ input[type='radio'].visually-hidden {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin-left: -5px;
     background: url("../images/form-bg.jpg") center center no-repeat;
 }
+
+/*крестик*/
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+}
+.close:hover {
+    cursor: pointer;
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    -moz-transition: opacity 0.3s ease;
+    -ms-transition: opacity 0.3s ease;
+    -o-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+.close::before, .close::after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #ffffff;
+}
+.close::before {
+    transform: rotate(45deg);
+}
+.close::after {
+    transform: rotate(-45deg);
+}
+/*крестик*/
 
 .modal__title {
     color: #ffffff;
@@ -1427,17 +1470,16 @@ input[type='radio'].visually-hidden {
     outline: none;
     border: none;
     border-bottom: 1px solid #ffffff;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 26px;
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
     position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-/*.modal-form__input:last-child {*/
-/*margin-bottom: 50px;*/
-/*}*/
 
 .modal-form__input::-webkit-input-placeholder {
     color: #ffffff;
@@ -1511,6 +1553,7 @@ input[type='radio'].visually-hidden {
     text-align: center;
     padding: 16px 40px;
     outline: none;
+    margin-top: 20px;
 }
 
 .modal-form__btn:hover {
@@ -1522,6 +1565,28 @@ input[type='radio'].visually-hidden {
     font-size: 10px;
     /*position: absolute;*/
     /*right: 50px;*/
+}
+
+.answer-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 101;
+    display: none;
+    width: 300px;
+    height: 200px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 18px;
+    background: #ffffff;
+    text-align: center;
+    line-height: 200px;
+    transform: translateY(-100px);
+}
+
+.close--answer::before, .close--answer::after {
+    background-color: #000;
 }
 
 /*-------------------------------------media screen-------------------------------------------------------*/

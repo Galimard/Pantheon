@@ -122,11 +122,45 @@ $(document).ready(function() {
 
     });
 
+    $("body").on("click", ".js-close", function() {
+
+        $('.js-modal').fadeOut(100);
+        $('body').removeClass('open-modal');
+        $("#js-overlay").remove();
+
+    });
+
     $("body").on("click", "#js-overlay", function() {
 
         $('.js-modal').fadeOut(100);
         $('body').removeClass('open-modal');
         $("#js-overlay").remove();
+
+    });
+
+    //========================Заглушка на формы===========================//
+    $('.js-answer-modal').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('.answer-modal').fadeIn(700);
+
+        if($('.overlay').length <= 0 || $('.overlay').length == 1) {
+            $('body').append("<div class='overlay' id='js-overlay2'></div>")
+        }
+    });
+
+    $("body").on("click", ".js-close2", function() {
+
+        $('.answer-modal').fadeOut(100);
+        $("#js-overlay2").remove();
+
+    });
+
+    $("body").on("click", "#js-overlay2", function() {
+
+        $('.answer-modal').fadeOut(100);
+        $("#js-overlay2").remove();
 
     });
 

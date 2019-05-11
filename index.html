@@ -274,7 +274,7 @@
                     <form action="#" class="footer-main-form">
                         <input type="text" placeholder="Имя" class="footer-main-form__input">
                         <input type="email" placeholder="E-mail" class="footer-main-form__input">
-                        <button type="submit" class="footer-main-form__btn">Подписаться</button>
+                        <button type="submit" class="footer-main-form__btn js-answer-modal">Подписаться</button>
                     </form>
                 </div>
                 <div class="footer-main-text">
@@ -299,6 +299,7 @@
             </div>
         </footer>
         <div class="modal js-modal" id="js-modal-form">
+            <span class="close js-close"></span>
             <h3 class="modal__title">Заполните форму</h3>
             <form action="#" class="modal-form" id="js-register-form">
                 <div class="modal-form-message js-form-message"></div>
@@ -314,8 +315,12 @@
                     <span class="error"></span>
                     <input type="tel" placeholder="Ваш телефон" name="form_tel" class="modal-form__input modal-form__tel">
                 </div>
-                <button type="submit" class="modal-form__btn">Отправить заявку</button>
+                <button type="submit" class="modal-form__btn js-answer-modal">Отправить заявку</button>
             </form>
+        </div>
+        <div class="answer-modal js-modal">
+            <span class="close close--answer js-close2"></span>
+            Спасибо!
         </div>
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
