@@ -413,11 +413,24 @@ input[type='radio'].visually-hidden {
 }
 
 .header-video-block {
-    width: 100%;
-    height: 100%; /*290*/
+    max-width: 585px;
+    height: 290px;
     overflow: hidden;
     margin: 50px auto 0;
     box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.4);
+    position: relative;/*для iframe*/
+}
+
+.header-video-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .header-video__text {
@@ -750,10 +763,28 @@ input[type='radio'].visually-hidden {
 
 .video {
     display: grid;
-    grid-template-rows: auto minmax(175px, 570px) minmax(465px, auto);
+    grid-template-rows: auto auto minmax(465px, auto);
     background: url("../images/stars.jpg") center center no-repeat;
     background-size: cover;
     padding: 0 14.5%;
+}
+
+.video-block {
+    max-width: 1140px;
+    height: 572px;
+    position: relative; /*для iframe*/
+}
+
+.video-block iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .video-title {
@@ -1462,7 +1493,11 @@ input[type='radio'].visually-hidden {
     margin-bottom: 22px;
 }
 
-.modal-form__input {
+.form-block {
+    position: relative; /*для блока error*/
+}
+
+.modal-form-block__input {
     display: block;
     height: 23px;
     width: 100%;
@@ -1481,31 +1516,31 @@ input[type='radio'].visually-hidden {
     box-sizing: border-box;
 }
 
-.modal-form__input::-webkit-input-placeholder {
+.modal-form-block__input::-webkit-input-placeholder {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
 }
 
-.modal-form__input:-moz-placeholder {
+.modal-form-block__input:-moz-placeholder {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
 }
 
-.modal-form__input::-moz-placeholder {
+.modal-form-block__input::-moz-placeholder {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
 }
 
-.modal-form__input:-ms-input-placeholder {
+.modal-form-block__input:-ms-input-placeholder {
     color: #ffffff;
     font-size: 16px;
     font-weight: 300;
 }
 
-.modal-form__input:focus::-webkit-input-placeholder {
+.modal-form-block__input:focus::-webkit-input-placeholder {
     opacity:0;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
@@ -1514,7 +1549,7 @@ input[type='radio'].visually-hidden {
     transition: opacity 0.5s ease;
 }
 
-.modal-form__input:focus:-moz-placeholder {
+.modal-form-block__input:focus:-moz-placeholder {
     opacity:0;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
@@ -1523,7 +1558,7 @@ input[type='radio'].visually-hidden {
     transition: opacity 0.5s ease;
 }
 
-.modal-form__input:focus::-moz-placeholder {
+.modal-form-block__input:focus::-moz-placeholder {
     opacity:0;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
@@ -1532,7 +1567,7 @@ input[type='radio'].visually-hidden {
     transition: opacity 0.5s ease;
 }
 
-.modal-form__input:focus:-ms-input-placeholder {
+.modal-form-block__input:focus:-ms-input-placeholder {
     opacity:0;
     -webkit-transition: opacity 0.5s ease;
     -moz-transition: opacity 0.5s ease;
@@ -1560,11 +1595,12 @@ input[type='radio'].visually-hidden {
     cursor: pointer;
 }
 
-.error {
+.form-block__error {
     color: #FF0000;
     font-size: 10px;
-    /*position: absolute;*/
-    /*right: 50px;*/
+    position: absolute;
+    right: 0;
+    top: -10px;
 }
 
 .answer-modal {
@@ -1817,6 +1853,10 @@ input[type='radio'].visually-hidden {
     .video-title, .life-title, .footer-title {
         margin: 65px 0 40px;
         line-height: 45px;
+    }
+
+    .video-block {
+        height: 400px;
     }
 
     .tabs-list-content {
@@ -2072,6 +2112,10 @@ input[type='radio'].visually-hidden {
         line-height: 42px;
     }
 
+    .video-block {
+        height: 300px;
+    }
+
     .tabs-list-content {
         position: static;
         opacity: 1;
@@ -2249,6 +2293,10 @@ input[type='radio'].visually-hidden {
 }
 
 @media all and (max-width: 400px) {
+    .video-block {
+        height: 200px;
+    }
+
     .footer-main-form-block {
         margin: 0 -4%;
         width: 100%;
@@ -2281,10 +2329,17 @@ input[type='radio'].visually-hidden {
 
     .header-main {
         height: 43px;
+        padding-top: 50px;
     }
 
     .header-video {
         margin: -15px auto 0;
+        max-width: 215px;
+    }
+
+    .header-video-block {
+        max-width: 215px;
+        height: 140px;
     }
 
     .header-video__text {

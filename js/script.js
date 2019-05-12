@@ -36,7 +36,7 @@ $jscomp.polyfill("Array.prototype.find",function(a){return a?a:function(a,d){ret
 
 $(document).ready(function() {
 
-    //---------------------бургер меню--------------------
+    //=============================бургер меню================================//
     if($('.js-burger') && $('.js-burger').length > 0) {
 
         $('.js-burger').on('click', function(event) {
@@ -57,7 +57,7 @@ $(document).ready(function() {
         });
     }
 
-    //----------------------скролл меню--------------------------
+    //===========================скролл меню===================================//
 
     $('.js-menu-item').on("click", function () {
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    //------------------------скролл кнопки в хедере-----------------------
+    //=============================скролл кнопки в хедере=============================//
 
     $('.js-header-button').on('click', function(e) {
 
@@ -82,7 +82,29 @@ $(document).ready(function() {
         }, 1000);
     });
 
-    //--------------------анимация блоков tizers--------------------
+    //==========================youtube==============================//
+    //https://developers.google.com/youtube/iframe_api_reference?hl=ru#Getting_Started
+    //http://jsfiddle.net/BeUFb/326/
+    // var tag = document.createElement('script');
+    //
+    // tag.src = "https://www.youtube.com/iframe_api";
+    // var firstScriptTag = document.getElementsByTagName('script')[0];
+    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    //
+    // var player;
+    // function onYouTubeIframeAPIReady() {
+    //     player = new YT.Player('player', {
+    //         height: '295',
+    //         width: '585',
+    //         videoId: 'TnY23KEkZPY',
+    //         events: {
+    //             'onReady': onPlayerReady,
+    //             'onStateChange': onPlayerStateChange
+    //         }
+    //     });
+    // }
+
+    //==========================анимация блоков tizers===========================//
 
     var wow = new WOW(
         {
@@ -96,7 +118,8 @@ $(document).ready(function() {
     );
     wow.init();
 
-    //-------------------------------модальное окно Я готов лететь--------------------------
+    //========================модальное окно Я готов лететь==========================//
+
     //рассчитываем центральное положение окна margin-left
     $(".js-modal").each(function () { //для всех можальных окон
 
@@ -108,6 +131,7 @@ $(document).ready(function() {
 
     });
 
+    //вызов модального окна
     $('.js-show-modal').on('click', function (e) {
 
         e.preventDefault();
@@ -122,6 +146,7 @@ $(document).ready(function() {
 
     });
 
+    //закрытие по крестику
     $("body").on("click", ".js-close", function() {
 
         $('.js-modal').fadeOut(100);
@@ -130,6 +155,7 @@ $(document).ready(function() {
 
     });
 
+    //закрытие по подложке (можно объединить?)
     $("body").on("click", "#js-overlay", function() {
 
         $('.js-modal').fadeOut(100);
@@ -138,97 +164,18 @@ $(document).ready(function() {
 
     });
 
-    //========================Заглушка на формы===========================//
-    $('.js-answer-modal').on('click', function (e) {
+    //======================валидация формы Я готов лететь========================//
+    //https://jqueryvalidation.org/category/plugin/
 
-        e.preventDefault();
+    formValidate('form[id="js-register-form"]');
+    formValidate('form[id="footer-form"]');
 
-        $('.answer-modal').fadeIn(700);
-
-        if($('.overlay').length <= 0 || $('.overlay').length == 1) {
-            $('body').append("<div class='overlay' id='js-overlay2'></div>")
-        }
-    });
-
-    $("body").on("click", ".js-close2", function() {
-
-        $('.answer-modal').fadeOut(100);
-        $("#js-overlay2").remove();
-
-    });
-
-    $("body").on("click", "#js-overlay2", function() {
-
-        $('.answer-modal').fadeOut(100);
-        $("#js-overlay2").remove();
-
-    });
-
-    //----------------------валидация формы Я готов лететь--------------------------
-
-    $("#js-register-form").validate({
-        rules: {
-            form_name: {
-                required: true
-            },
-            form_email: {
-                required: true,
-                email: true
-            },
-            form_tel: {
-                required: true,
-                digits: true
-            }
-        },
-        messages: {
-            form_name: {
-                required: "Поле Имя обязательное для заполнения"
-            },
-            form_email: {
-                required: "Поле E-mail обязательное для заполнения",
-                email: "Введите пожалуйста корректный e-mail"
-            },
-            form_tel: {
-                required: "Поле Телефон обязательное для заполнения"
-            }
-        },
-        focusCleanup: true,
-        focusInvalid: false,
-        errorElement: "span",
-        errorPlacement: function(error, element) {
-            var $errorWrapper = $(element).closest('.wrap').find('.error');
-            console.log($errorWrapper);
-            error.appendTo( $errorWrapper );
-        },
-        // onfocusout: function(element) {
-        //     var $errorWrapper = $(element).closest('.wrap').find('.form-review__warning');
-        //     if(Number($(element).val().length) === 0){
-        //         $(element).removeClass('valid');
-        //         $(element).removeClass('error');
-        //         $($errorWrapper).empty();
-        //     }
-        //     if(Number($(element).val().length) > 0){
-        //         $(element.closest('form')).valid();
-        //     }
-        // },
-        // submitHandler: function(form){
-        //     $('.contacts-review__form').toggleClass('contacts-review__form--nonactive');
-        //     $('.contacts-review__message').toggleClass('contacts-review__message--active');
-        // }
-        // errorClass: "modal-form_error",
-        // invalidHandler: function(event, validator) { //добавить сообщение в блок
-        //     $(".js-form-message").text("Исправьте, пожалуйста, все ошибки.");
-        // },
-        // onkeyup: function(element) { //убрать верхнее сообщение при фокусе
-        //     $(".js-form-message").text("");
-        // }
-    });
-
-    if($('.modal-form__tel') && $('.modal-form__tel').length > 0) {
-        $('.modal-form__tel').mask('+7 (000) 000-00-00');
+    //=====================маска на телефон========================//
+    if($('.modal-form-block__tel') && $('.modal-form-block__tel').length > 0) {
+        $('.modal-form-block__tel').mask('+7 (000) 000-00-00');
     }
 
-    //стилизация скролла в блоке tizers
+    //=====================стилизация скролла в блоке tizers===========================//
     if($(".js-scroll").length) {
 
         $(".js-scroll").niceScroll({
@@ -297,26 +244,99 @@ $(document).ready(function() {
 
     });
 
-    //находим кликнутый элемент/вкладку из другого списка
-    /* @param item {DOM elem} элемент, по которому кликнули
-        @return list[i] {DOM elem} элемент, соответствующий порядку кликнутого элемента
-    * */
-    function getClickItem(item) {
-        var list1 = $('.life-tabs-list li'), //иконки
-               list2 = $('.life-tabs-controls li'), //кругляши
-               list3 = $('.life-tabs-block__item'), //вкладки
-               result = [];
+});
 
-        for (var i = 0; i < list1.length; i++) {
-            if (item == list2[i]) {
-                result.push(list1[i], list3[i]);
-                return result; //находим соответствующую иконку + вкладку
+//добавляем метод проверки почты в валидатор
+$.validator.addMethod("correctEmail", function (value, element) {
+    return this.optional(element) || /[a-z0-9]+@[a-z0-9]+\.[a-z]+/.test(value);
+}, 'Please enter a valid email address.');
+
+//функция валидации формы
+/*@param formName {string} - имя проверяемой формы
+* */
+function formValidate(formName) {
+
+    $(formName).validate({
+        rules: {
+            form_name: {
+                required: true,
+                minlength: 2
+            },
+            form_email: {
+                required: true,
+                correctEmail: true,
+                minlength: 5
+            },
+            form_tel: {
+                required: true
             }
-            if (item == list1[i]) {
-                result.push(list2[i], list3[i]);
-                return result; //находим соответствующий кругляш + вкладку
+        },
+        messages: {
+            form_name: {
+                required: "Поле Имя обязательное для заполнения"
+            },
+            form_email: {
+                required: "Поле E-mail обязательное для заполнения",
+                email: "Введите пожалуйста корректный e-mail"
+            },
+            form_tel: {
+                required: "Поле Телефон обязательное для заполнения"
             }
+        },
+        focusCleanup: true, //убирает сообщение об ошибке в активном поле
+        focusInvalid: false, //ставит фокус на первое поле ввода
+        errorElement: "span",
+        errorPlacement: function(error, element) {
+            var $errorWrapper = $(element).closest('.form-block').find('.form-block__error');//input- родитель общий - деть-спан
+            error.appendTo($errorWrapper);
+        },
+        // onfocusout: true
+        submitHandler: function(form){
+            //========================Заглушка на формы===========================//
+            $('.answer-modal').fadeIn(700);
+
+            if($('.overlay').length <= 0 || $('.overlay').length == 1) {
+                $('body').append("<div class='overlay' id='js-overlay2'></div>")
+            }
+
+            //закрытие по крестику
+            $("body").on("click", ".js-close2", function() {
+
+                $('.answer-modal').fadeOut(100);
+                $("#js-overlay2").remove();
+
+            });
+
+            //закрытие по подложке
+            $("body").on("click", "#js-overlay2", function() {
+
+                $('.answer-modal').fadeOut(100);
+                $("#js-overlay2").remove();
+
+            });
+        }
+    });
+
+}
+
+//находим кликнутый элемент/вкладку из другого списка
+/* @param item {DOM elem} элемент, по которому кликнули
+    @return list[i] {DOM elem} элемент, соответствующий порядку кликнутого элемента
+* */
+function getClickItem(item) {
+    var list1 = $('.life-tabs-list li'), //иконки
+        list2 = $('.life-tabs-controls li'), //кругляши
+        list3 = $('.life-tabs-block__item'), //вкладки
+        result = [];
+
+    for (var i = 0; i < list1.length; i++) {
+        if (item == list2[i]) {
+            result.push(list1[i], list3[i]);
+            return result; //находим соответствующую иконку + вкладку
+        }
+        if (item == list1[i]) {
+            result.push(list2[i], list3[i]);
+            return result; //находим соответствующий кругляш + вкладку
         }
     }
-
-});
+}

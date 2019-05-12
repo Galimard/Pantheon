@@ -21,8 +21,8 @@
             <div class="header-main">
                 <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>
                 <div class="header-video">
-                    <div class="header-video-block">
-                        <iframe width="300" height="140" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
+                    <div class="header-video-block" id="player">
+                        <iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>
                     </div>
                     <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
                 </div>
@@ -120,8 +120,7 @@
         <div id="video" class="video">
             <h2 class="video-title title">Подводные камни в масштабах космоса</h2>
             <div class="video-block">
-                <iframe width="290" height="172" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>
-                <!--<iframe width="1140" height="572" src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen showinfo="0"></iframe>-->
+                <iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>
             </div>
             <div class="video-tabs">
                 <ul class="tabs-list">
@@ -271,9 +270,15 @@
             <div class="footer-main">
                 <div class="footer-main-form-block">
                     <h3 class="footer-main-form-block__title">Будь в курсе новостей</h3>
-                    <form action="#" class="footer-main-form">
-                        <input type="text" placeholder="Имя" class="footer-main-form__input">
-                        <input type="email" placeholder="E-mail" class="footer-main-form__input">
+                    <form action="#" class="footer-main-form" id="footer-form">
+                        <div class="form-block">
+                            <span class="form-block__error"></span>
+                            <input type="text" placeholder="Имя" name="form_name" class="footer-main-form__input">
+                        </div>
+                        <div class="form-block">
+                            <span class="form-block__error"></span>
+                            <input type="email" placeholder="E-mail" name="form_email" class="footer-main-form__input">
+                        </div>
                         <button type="submit" class="footer-main-form__btn js-answer-modal">Подписаться</button>
                     </form>
                 </div>
@@ -302,18 +307,17 @@
             <span class="close js-close"></span>
             <h3 class="modal__title">Заполните форму</h3>
             <form action="#" class="modal-form" id="js-register-form">
-                <div class="modal-form-message js-form-message"></div>
-                <div class="wrap">
-                    <span class="error"></span>
-                    <input type="text" placeholder="Ваше имя" name="form_name" class="modal-form__input modal-form__name">
+                <div class="form-block">
+                    <span class="form-block__error"></span>
+                    <input type="text" placeholder="Ваше имя" name="form_name" class="modal-form-block__input modal-form-block__name">
                 </div>
-                <div class="wrap">
-                    <span class="error"></span>
-                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="modal-form__input modal-form__email">
+                <div class="form-block">
+                    <span class="form-block__error"></span>
+                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="modal-form-block__input modal-form-block__email">
                 </div>
-                <div class="wrap">
-                    <span class="error"></span>
-                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="modal-form__input modal-form__tel">
+                <div class="form-block">
+                    <span class="form-block__error"></span>
+                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="modal-form-block__input modal-form-block__tel">
                 </div>
                 <button type="submit" class="modal-form__btn js-answer-modal">Отправить заявку</button>
             </form>
