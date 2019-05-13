@@ -21,8 +21,9 @@
             <div class="header-main">
                 <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>
                 <div class="header-video">
-                    <div class="header-video-block" id="player">
-                        <iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>
+                    <div class="header-video-block">
+                        <div id="my-video-display"></div>
+                        <!--<iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>-->
                     </div>
                     <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
                 </div>
@@ -120,13 +121,13 @@
         <div id="video" class="video">
             <h2 class="video-title title">Подводные камни в масштабах космоса</h2>
             <div class="video-block">
-                <iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>
+                <div id="my-video-display2"></div>
+                <!--<iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>-->
             </div>
             <div class="video-tabs">
                 <ul class="tabs-list">
                     <li class="tabs-list__item">
-                        <input id="ac-1" name="accordion-1" type="checkbox" class="checkbox__input">
-                        <label for="ac-1" class="tabs-list__title tabs-list__acc" title="Жить или выживать?">Жить или выживать?</label>
+                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Жить или выживать?</a>
                         <input type="radio" name="tabs" id="tab-1" checked class="tabs-list__input">
                         <label for="tab-1" class="tabs-list__title tabs-list__radio">Жить или выживать?</label>
                         <div class="tabs-list-content">
@@ -140,8 +141,7 @@
                         </div>
                     </li>
                     <li class="tabs-list__item">
-                        <input id="ac-2" name="accordion-1" type="checkbox" class="checkbox__input">
-                        <label for="ac-2" class="tabs-list__title tabs-list__acc" title="Готовы ли технологии?">Готовы ли технологии?</label>
+                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Готовы ли технологии?</a>
                         <input type="radio" name="tabs" id="tab-2" checked class="tabs-list__input">
                         <label for="tab-2" class="tabs-list__title tabs-list__radio">Готовы ли технологии?</label>
                         <div class="tabs-list-content">
@@ -155,8 +155,7 @@
                         </div>
                     </li>
                     <li class="tabs-list__item">
-                        <input id="ac-3" name="accordion-1" type="checkbox" class="checkbox__input">
-                        <label for="ac-3" class="tabs-list__title tabs-list__acc" title="Путешествие на грани фантастики">Путешествие на грани фантастики</label>
+                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Путешествие на грани фантастики</a>
                         <input type="radio" name="tabs" id="tab-3" checked class="tabs-list__input">
                         <label for="tab-3" class="tabs-list__title tabs-list__radio">Путешествие на грани фантастики</label>
                         <div class="tabs-list-content">
@@ -170,8 +169,7 @@
                         </div>
                     </li>
                     <li class="tabs-list__item">
-                        <input id="ac-4" name="accordion-1" type="checkbox" class="checkbox__input">
-                        <label for="ac-4" class="tabs-list__title tabs-list__acc" title="Жизнь на Марсе">Жизнь на Марсе</label>
+                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Жизнь на Марсе</a>
                         <input type="radio" name="tabs" id="tab-4" checked class="tabs-list__input">
                         <label for="tab-4" class="tabs-list__title tabs-list__radio">Жизнь на Марсе</label>
                         <div class="tabs-list-content">
@@ -295,10 +293,10 @@
                 <div class="footer-bottom-socials-block">
                     <span class="footer-bottom-socials-text">Следуйте за нами</span>
                     <div class="footer-bottom-socials">
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__vk"><span class="visually-hidden">vkontakte</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__twitter"><span class="visually-hidden">twitter</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__facebook"><span class="visually-hidden">facebook</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__youtube"><span class="visually-hidden">youtube</span></a>
+                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--vk"><span class="visually-hidden">vkontakte</span></a>
+                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--twitter"><span class="visually-hidden">twitter</span></a>
+                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--facebook"><span class="visually-hidden">facebook</span></a>
+                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--youtube"><span class="visually-hidden">youtube</span></a>
                     </div>
                 </div>
             </div>

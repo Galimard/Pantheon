@@ -225,38 +225,12 @@ input[type='radio'].visually-hidden {
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.45px;
-    position: relative;
-}
-
-.header-menu-block__link::after {
-    content: '';
-    display: inline-block;
-    height: 1px;
-    width: 0;
-    background: #ffffff;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz-transition: width 0.3s ease-in-out;
-    -ms-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-}
-
-.header-menu-block__link:hover::after {
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-burger {
-    position: absolute;
-    top: 2px;
-    right: -65px;
     display: block;
     width: 47px;
     height: 18px;
@@ -414,17 +388,18 @@ input[type='radio'].visually-hidden {
 
 .header-video-block {
     max-width: 585px;
-    height: 290px;
+    height: auto;
+    /*height: 290px;*/
     overflow: hidden;
     margin: 50px auto 0;
     box-shadow: 0 25px 38px 0 rgba(0, 0, 0, 0.4);
-    position: relative;/*для iframe*/
 }
 
-.header-video-block iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+#my-video-display {
+    margin-bottom: -5px;
+}
+
+#my-video-display, #my-video-display2 {
     width: 100%;
     height: 100%;
     min-width: 100%;
@@ -442,7 +417,6 @@ input[type='radio'].visually-hidden {
     position: absolute;
     top: 110px;
     right: -195px;
-    /*right: -45px;*/
 }
 
 .header-video__text::before {
@@ -757,6 +731,12 @@ input[type='radio'].visually-hidden {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    transition: box-shadow 0.3s ease;
+}
+
+.realization-fly-cost__btn:hover {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.48);
+    transition: box-shadow 0.3s ease;
 }
 
 /*--------------------------------------------------стили для video --------------------------------------------------*/
@@ -771,20 +751,8 @@ input[type='radio'].visually-hidden {
 
 .video-block {
     max-width: 1140px;
-    height: 572px;
-    position: relative; /*для iframe*/
-}
-
-.video-block iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    /*height: 572px;*/
 }
 
 .video-title {
@@ -1256,10 +1224,13 @@ input[type='radio'].visually-hidden {
     font-weight: 700;
     text-align: center;
     padding: 16px 40px;
+    transition: box-shadow 0.3s ease;
 }
 
 .footer-main-form__btn:hover {
     cursor: pointer;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.48);
+    transition: box-shadow 0.3s ease;
 }
 
 .footer-main-text__p {
@@ -1398,21 +1369,22 @@ input[type='radio'].visually-hidden {
     display: block;
     width: 35px;
     height: 35px;
+    border-radius: 50%;
 }
 
-.footer-bottom-socials__vk {
-    background: url("../images/vk.svg") center center no-repeat;
+.footer-bottom-socials__link--vk {
+    background: #4d6e9c url("../images/vk-logo.svg") center center no-repeat;
 }
 
-.footer-bottom-socials__twitter {
-    background: url("../images/twitter.svg") center center no-repeat;
+.footer-bottom-socials__link--twitter {
+    background: #55a0e2 url("../images/twitter-logo.svg") center center no-repeat;
 }
 
-.footer-bottom-socials__facebook {
-    background: url("../images/facebook.svg") center center no-repeat;
+.footer-bottom-socials__link--facebook {
+    background: #3d5494 url("../images/facebook-logo.svg") center center no-repeat;
 }
 
-.footer-bottom-socials__youtube {
+.footer-bottom-socials__link--youtube {
     background: url("../images/youtube.svg") center center no-repeat;
 }
 
@@ -1706,7 +1678,14 @@ input[type='radio'].visually-hidden {
     .header-menu-block {
         grid-column: 2/3;
         text-align: right;
-        padding-right: 75px;
+    }
+
+    .header-menu-block__link {
+        justify-content: flex-end;
+    }
+
+    .header-burger {
+        margin-left: 20px;
     }
 
     .header-main {
@@ -1853,10 +1832,6 @@ input[type='radio'].visually-hidden {
     .video-title, .life-title, .footer-title {
         margin: 65px 0 40px;
         line-height: 45px;
-    }
-
-    .video-block {
-        height: 400px;
     }
 
     .tabs-list-content {
@@ -2048,10 +2023,6 @@ input[type='radio'].visually-hidden {
         right: 2%;
     }
 
-    .header-burger {
-        top: 23px;
-    }
-
     .header-main-title {
         letter-spacing: 0.5px;
     }
@@ -2112,16 +2083,12 @@ input[type='radio'].visually-hidden {
         line-height: 42px;
     }
 
-    .video-block {
-        height: 300px;
-    }
-
     .tabs-list-content {
         position: static;
         opacity: 1;
     }
 
-    .tabs-list-content__title, .tabs-list__radio, .checkbox__input {
+    .tabs-list-content__title, .tabs-list__radio, .checkbox__input, .tabs-list__input, .tabs-list-content {
         display: none;
     }
 
@@ -2129,27 +2096,8 @@ input[type='radio'].visually-hidden {
         display: block;
     }
 
-    .tabs-list-content {
-        max-height: 0;
-        overflow: hidden;
-        -webkit-transition: max-height 0.3s;
-        -moz-transition: max-height 0.3s;
-        -ms-transition: max-height 0.3s;
-        -o-transition: max-height 0.3s;
-        transition: max-height 0.3s;
-    }
-
-    .checkbox__input:checked ~ .tabs-list-content {
-        max-height: 415px;
-        -webkit-transition: max-height 0.3s;
-        -moz-transition: max-height 0.3s;
-        -ms-transition: max-height 0.3s;
-        -o-transition: max-height 0.3s;
-        transition: max-height 0.3s;
-    }
-
-    .checkbox__input:checked + .tabs-list__title {
-        font-weight: 700;
+    .title--active {
+        text-shadow: 0 0 1px #ffffff, 0 0 1px #ffffff; /*жирность текста при наведении*/
         color: #ffffff;
         -webkit-transition: color 0.3s ease;
         -moz-transition: color 0.3s ease;
@@ -2158,18 +2106,18 @@ input[type='radio'].visually-hidden {
         transition: color 0.3s ease;
     }
 
-    .checkbox__input:checked + .tabs-list__title::after {
-        -webkit-transform: rotate(-90deg);
-        -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-        -o-transform: rotate(-90deg);
+    .title--active:hover::after {
+        background: url("../images/arrow-right-3.svg") center center no-repeat;
+    }
+
+    .title--active::after {
+        background: url("../images/arrow-right-3.svg") center center no-repeat;
         transform: rotate(90deg);
         -webkit-transition: transform 0.3s ease;
         -moz-transition: transform 0.3s ease;
         -ms-transition: transform 0.3s ease;
         -o-transition: transform 0.3s ease;
         transition: transform 0.3s ease;
-        background: url("../images/arrow-right-active.svg") center center no-repeat;
     }
 
 }
@@ -2339,7 +2287,6 @@ input[type='radio'].visually-hidden {
 
     .header-video-block {
         max-width: 215px;
-        height: 140px;
     }
 
     .header-video__text {
