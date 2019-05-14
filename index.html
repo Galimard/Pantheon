@@ -22,7 +22,10 @@
                 <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>
                 <div class="header-video">
                     <div class="header-video-block">
-                        <div id="my-video-display"></div>
+                        <!--<div id="my-video-display"></div>-->
+                        <video id="my-video-display" controls="true" poster="images/video.png" width="100%" style="max-width: 100%">
+                            <source src="https://www.youtube.com/watch?v=TnY23KEkZPY" type="video/youtube" />
+                        </video>
                         <!--<iframe src="https://www.youtube.com/embed/TnY23KEkZPY" frameborder="0" allowfullscreen showinfo="0"></iframe>-->
                     </div>
                     <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
@@ -33,12 +36,12 @@
         <div class="header-menu js-menu">
             <nav>
                 <ul>
-                    <li class="header-menu__item js-menu-item"><a href="#header" class="header-menu-item__link">Главная</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#about-mars" class="header-menu-item__link">О Марсе</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#realization" class="header-menu-item__link">От идеи до реализации</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#video" class="header-menu-item__link">Подводные камни в масштабах космоса</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#life" class="header-menu-item__link">Организация жизни в колонии</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#footer" class="header-menu-item__link">Когда вылетаем?</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#header" class="header-menu__link">Главная</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#about-mars" class="header-menu__link">О Марсе</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#realization" class="header-menu__link">От идеи до реализации</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#video" class="header-menu__link">Подводные камни в масштабах космоса</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#life" class="header-menu__link">Организация жизни в колонии</a></li>
+                    <li class="header-menu__item js-menu-item"><a href="#footer" class="header-menu__link">Когда вылетаем?</a></li>
                 </ul>
             </nav>
         </div>
@@ -128,9 +131,8 @@
                 <ul class="tabs-list">
                     <li class="tabs-list__item">
                         <a href="#" class="tabs-list__title tabs-list__acc js-title">Жить или выживать?</a>
-                        <input type="radio" name="tabs" id="tab-1" checked class="tabs-list__input">
-                        <label for="tab-1" class="tabs-list__title tabs-list__radio">Жить или выживать?</label>
-                        <div class="tabs-list-content">
+                        <label class="tabs-list__title tabs-list__radio tabs-list__title--active">Жить или выживать?</label>
+                        <div class="tabs-list-content tabs-list-content--active">
                             <h3 class="tabs-list-content__title">Жить или выживать?</h3>
                             <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
                                 Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
@@ -142,8 +144,7 @@
                     </li>
                     <li class="tabs-list__item">
                         <a href="#" class="tabs-list__title tabs-list__acc js-title">Готовы ли технологии?</a>
-                        <input type="radio" name="tabs" id="tab-2" checked class="tabs-list__input">
-                        <label for="tab-2" class="tabs-list__title tabs-list__radio">Готовы ли технологии?</label>
+                        <label class="tabs-list__title tabs-list__radio">Готовы ли технологии?</label>
                         <div class="tabs-list-content">
                             <h3 class="tabs-list-content__title">Готовы ли технологии?</h3>
                             <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
@@ -156,8 +157,7 @@
                     </li>
                     <li class="tabs-list__item">
                         <a href="#" class="tabs-list__title tabs-list__acc js-title">Путешествие на грани фантастики</a>
-                        <input type="radio" name="tabs" id="tab-3" checked class="tabs-list__input">
-                        <label for="tab-3" class="tabs-list__title tabs-list__radio">Путешествие на грани фантастики</label>
+                        <label class="tabs-list__title tabs-list__radio">Путешествие на грани фантастики</label>
                         <div class="tabs-list-content">
                             <h3 class="tabs-list-content__title">Путешествие на грани фантастики</h3>
                             <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
@@ -170,8 +170,7 @@
                     </li>
                     <li class="tabs-list__item">
                         <a href="#" class="tabs-list__title tabs-list__acc js-title">Жизнь на Марсе</a>
-                        <input type="radio" name="tabs" id="tab-4" checked class="tabs-list__input">
-                        <label for="tab-4" class="tabs-list__title tabs-list__radio">Жизнь на Марсе</label>
+                        <label class="tabs-list__title tabs-list__radio">Жизнь на Марсе</label>
                         <div class="tabs-list-content">
                             <h3 class="tabs-list-content__title">Жизнь на Марсе</h3>
                             <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
@@ -307,15 +306,15 @@
             <form action="#" class="modal-form" id="js-register-form">
                 <div class="form-block">
                     <span class="form-block__error"></span>
-                    <input type="text" placeholder="Ваше имя" name="form_name" class="modal-form-block__input modal-form-block__name">
+                    <input type="text" placeholder="Ваше имя" name="form_name" class="form-block__input">
                 </div>
                 <div class="form-block">
                     <span class="form-block__error"></span>
-                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="modal-form-block__input modal-form-block__email">
+                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="form-block__input">
                 </div>
                 <div class="form-block">
                     <span class="form-block__error"></span>
-                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="modal-form-block__input modal-form-block__tel">
+                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="form-block__input">
                 </div>
                 <button type="submit" class="modal-form__btn js-answer-modal">Отправить заявку</button>
             </form>
