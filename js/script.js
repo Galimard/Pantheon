@@ -98,29 +98,9 @@ $(document).ready(function() {
     //==========================youtube==============================//
     //https://developers.google.com/youtube/iframe_api_reference?hl=ru#Getting_Started
 
-    //https://github.com/mike-zarandona/prettyembed.js
-    // $('#my-video-display').prettyEmbed({
-    //     videoID: 'TnY23KEkZPY',
-    //     customPreviewImage: 'images/video.png',
-    //     showInfo: false,
-    //     showControls: true,
-    //     loop: false,
-    //     colorScheme: 'dark',
-    //     showRelated: false
-    // });
-    //
-    // $('#my-video-display2').prettyEmbed({
-    //     videoID: 'TnY23KEkZPY',
-    //     customPreviewImage: 'images/video.png',
-    //     showInfo: false,
-    //     showControls: true,
-    //     loop: false,
-    //     colorScheme: 'dark',
-    //     showRelated: false
-    // });
-
     //https://github.com/mediaelement/mediaelement/blob/master/docs/installation.md
     $('#my-video-display').mediaelementplayer();
+    $('#my-video-display2').mediaelementplayer();
 
     //==========================анимация блоков tizers===========================//
 
