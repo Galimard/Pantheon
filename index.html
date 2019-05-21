@@ -6,323 +6,365 @@
     <link rel="stylesheet" href="css/lib.css">
 </head>
 <body>
-    <div class="template-shadow">
-        <header id="header" class="header">
-            <a href="index.html" class="header-logo">Pantheon<span class="header-logo__span">project</span></a>
-            <div class="header-menu-block">
-                <a href="#" class="header-menu-block__link js-burger"><span class="header-menu-block__span">Меню</span>
-                    <span class="header-burger">
-                        <span class="header-burger__line js-line-main"></span>
-                        <span class="header-burger__line js-line-middle"></span>
-                        <span class="header-burger__line js-line-main"></span>
-                    </span>
-                </a>
-            </div>
-            <div class="header-main">
-                <h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>
-                <div class="header-video">
-                    <div class="header-video-block">
-                        <video id="my-video-display" controls="true" poster="images/video.jpg">
-                            <source src="https://www.youtube.com/watch?v=TnY23KEkZPY" type="video/youtube" />
-                        </video>
-                    </div>
-                    <span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>
-                </div>
-            </div>
-            <a href="#about-mars" class="header-button js-header-button"></a>
-        </header>
-        <div class="header-menu js-menu">
-            <nav>
-                <ul>
-                    <li class="header-menu__item js-menu-item"><a href="#header" class="header-menu__link">Главная</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#about-mars" class="header-menu__link">О Марсе</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#realization" class="header-menu__link">От идеи до реализации</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#video" class="header-menu__link">Подводные камни в масштабах космоса</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#life" class="header-menu__link">Организация жизни в колонии</a></li>
-                    <li class="header-menu__item js-menu-item"><a href="#footer" class="header-menu__link">Когда вылетаем?</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="tizers js-scroll">
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">4</div>
-                    <p class="tizers-item__text">четвертая планета по удаленности от Солнца</p>
-                </div>
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">7</div>
-                    <p class="tizers-item__text">седьмая по размерам планета Солнечной системы</p>
-                </div>
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">10,7%</div>
-                    <p class="tizers-item__text">массы Земли (ваш вес будет в 3 раза меньшe, чем на Земле)</p>
-                </div>
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">2</div>
-                    <p class="tizers-item__text">спутника вместо Луны (как картошка, только больше)</p>
-                </div>
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">21 км</div>
-                    <p class="tizers-item__text">высота самой высокой горы Марса</p>
-                </div>
-                <div class="tizers-item wow fadeInLeftBig">
-                    <div class="tizers-item__number">+20</div>
-                    <p class="tizers-item__text">максимальная температура на поверхности</p>
-                </div>
-            </div>
-        <div id="about-mars" class="about-mars">
-            <h2 class="about-mars-title title">Марс. Вспомнить всё.</h2>
-            <div class="about-mars-block">
-                <h3 class="about-mars-block__title">Что такое Марс?</h3>
-                <p class="about-mars-block__text">Планета Солнечной системы, названа в честь Марса — древнеримского бога войны. Иногда Марс называют «красной планетой» из-за красного оттенка поверхности, придаваемого ей оксидом железа.<br><br>
-                    Особенности планеты — наличие слабой отмосферы, состоящей в основном из улекислого газа, времена года, пылевые бури, сильная эррозия почв. </p>
-            </div>
-            <div class="about-mars-block">
-                <h3 class="about-mars-block__title">Где это? Как туда доехать?</h3>
-                <p class="about-mars-block__text">Расстояние до Марса — почти 56 миллионов километров.
-                    Чтобы преодалеть такое расстояние, нужно лететь
-                    на межпланетоном корабле 7-8 месяцев.</p>
-            </div>
-            <!--<div class="about-mars-animation">-->
-                <div class="about-mars-animation__earth"></div>
-                <div class="about-mars-animation__rocket"></div>
-                <div class="about-mars-animation__mars"></div>
+    <!--<div class="template-shadow">-->
+        <!--<header id="header" class="header">-->
+            <!--<a href="index.html" class="header-logo">Pantheon<span class="header-logo__span">project</span></a>-->
+            <!--<div class="header-menu-block">-->
+                <!--<a href="#" class="header-menu-block__link js-burger"><span class="header-menu-block__span">Меню</span>-->
+                    <!--<span class="header-burger">-->
+                        <!--<span class="header-burger__line js-line-main"></span>-->
+                        <!--<span class="header-burger__line js-line-middle"></span>-->
+                        <!--<span class="header-burger__line js-line-main"></span>-->
+                    <!--</span>-->
+                <!--</a>-->
             <!--</div>-->
-        </div>
-        <div id="realization" class="realization">
-            <h2 class="realization-title title">От идеи до реализации</h2>
-            <div class="realization-main">
-                <div class="realization-main__img">
-                    <img src="images/elon1.jpg" alt="elon">
-                </div>
-                <div class="realization-main-text">
-                    <h3 class="realization-main-text__title">Илон Маск. Гений или безумец?</h3>
-                    <p class="realization-main-text__text">
-                        Канадско-американский инженер, предприниматель, изобретатель и инвестор; миллиардер. Основатель компаний SpaceX и X.com, позже переименованной в PayPal. Планирует потратить большую часть накоплений на реализацию своей мечты, а также мечты многих тысяч романтиков, писателей, учёных: создать внеземную цивилизацию.
-                        <span class="realization-main-text__span">Мы должны сделать эту мечту реальностью за наше время жизни. Любой человек,
-который пожелает отправиться на Марс, должен иметь такую возможность</span>
-                        — заявил Маск на Международной астронавтической конференции в Гвадалахаре (Мексика). Он обосновал необходимость своего проекта вопросом выживания человечества, которое для своего сохранения должно стать «космическим видом».
-                        Илон поставил перед собой цель: скоратить стоимость вывода кораблей
-                        в космос в 10 раз, что станет первым шагом для человечества в освоении Марса.
-                    </p>
-                </div>
-            </div>
-            <div class="realization-fly">
-                <img src="images/img.jpg" alt="rocket" class="realization-fly__img">
-                <div class="realization-fly-block">
-                    <h3 class="realization-fly-block__title">Стоимость перелёта</h3>
-                    <p class="realization-fly-block__text">Высадка двоих астронавтов на Луну обошлась США в 20 млрд. долларов. Маск стремится сократить эту цифру в 20 000 раз, что составит <span>500 000 долларов</span> на человека.</p>
-                    <div class="realization-fly-cost">
-                        <span class="realization-fly-cost__price">$500 k</span>
-                        <span class="realization-fly-cost__text">и ты на Марсе!</span>
-                        <a href="#js-modal-form" class="realization-fly-cost__btn js-show-modal">Я готов лететь</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="video" class="video">
-            <h2 class="video-title title">Подводные камни в масштабах космоса</h2>
-            <div class="video-block">
-                <video id="my-video-display2" controls="true" poster="images/video2.jpg">
-                    <source src="https://www.youtube.com/watch?v=TnY23KEkZPY" type="video/youtube" />
-                </video>
-            </div>
-            <div class="video-tabs">
-                <ul class="tabs-list">
-                    <li class="tabs-list__item">
-                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Жить или выживать?</a>
-                        <label class="tabs-list__title tabs-list__radio tabs-list__title--active">Жить или выживать?</label>
-                        <div class="tabs-list-content tabs-list-content--active">
-                            <h3 class="tabs-list-content__title">Жить или выживать?</h3>
-                            <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
-                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
-                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
-                                <br><br>
-                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
-                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
-                        </div>
-                    </li>
-                    <li class="tabs-list__item">
-                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Готовы ли технологии?</a>
-                        <label class="tabs-list__title tabs-list__radio">Готовы ли технологии?</label>
-                        <div class="tabs-list-content">
-                            <h3 class="tabs-list-content__title">Готовы ли технологии?</h3>
-                            <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
-                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
-                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
-                                <br><br>
-                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
-                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
-                        </div>
-                    </li>
-                    <li class="tabs-list__item">
-                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Путешествие на грани фантастики</a>
-                        <label class="tabs-list__title tabs-list__radio">Путешествие на грани фантастики</label>
-                        <div class="tabs-list-content">
-                            <h3 class="tabs-list-content__title">Путешествие на грани фантастики</h3>
-                            <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
-                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
-                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
-                                <br><br>
-                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
-                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
-                        </div>
-                    </li>
-                    <li class="tabs-list__item">
-                        <a href="#" class="tabs-list__title tabs-list__acc js-title">Жизнь на Марсе</a>
-                        <label class="tabs-list__title tabs-list__radio">Жизнь на Марсе</label>
-                        <div class="tabs-list-content">
-                            <h3 class="tabs-list-content__title">Жизнь на Марсе</h3>
-                            <p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>
-                                Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год
-                                по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.
-                                <br><br>
-                                На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация
-                                при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div id="life" class="life">
-            <h2 class="life-title title">Организация жизни в колонии</h2>
-            <div class="life-tabs">
-                <div class="life-tabs-outer-list">
-                    <ul class="life-tabs-list">
-                    <li class="life-tabs-list__item life-tabs-list__item--active">
-                        <span class="life-tabs-list__icon life-tabs-list__live"></span>
-                        <a href="#" class="life-tabs-list__link  life-tabs-list__link--active">Проживание</a>
-                    </li>
-                    <li class="life-tabs-list__item">
-                        <span class="life-tabs-list__icon life-tabs-list__work"></span>
-                        <a href="#" class="life-tabs-list__link ">Работа</a>
-                    </li>
-                    <li class="life-tabs-list__item">
-                        <span class="life-tabs-list__icon life-tabs-list__search"></span>
-                        <a href="#" class="life-tabs-list__link ">Исследование</a>
-                    </li>
-                    <li class="life-tabs-list__item">
-                        <span class="life-tabs-list__icon life-tabs-list__photo"></span>
-                        <a href="#" class="life-tabs-list__link ">Галерея</a>
-                    </li>
-                    <li class="life-tabs-list__item">
-                        <span class="life-tabs-list__icon life-tabs-list__agric"></span>
-                        <a href="#" class="life-tabs-list__link ">Земледелие</a>
-                    </li>
-                </ul>
-                    <ul class="life-tabs-controls">
-                    <li class="life-tabs-controls__item life-tabs-controls__item--active"></li>
-                    <li class="life-tabs-controls__item"></li>
-                    <li class="life-tabs-controls__item"></li>
-                    <li class="life-tabs-controls__item"></li>
-                    <li class="life-tabs-controls__item"></li>
-                </ul>
-                </div>
-                <div class="life-tabs-block">
-                    <div class="life-tabs-block__item life-tabs-block__live life-tabs-block__item--active">
-                        <div class="life-tabs-block__img-wrap">
-                            <img src="images/elon2.jpg" alt="elon-mask">
-                        </div>
-                        <h3 class="life-tabs-block__title">Проживание</h3>
-                        <p class="life-tabs-block__text">В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. Благодаря этим компонентам, колонисты смогут принять душ, приготовить свежую пищу, носить обычную одежду. Весь комплекс соединен сетью ходов.</p>
-                        <div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>
-                    </div>
-                    <div class="life-tabs-block__item life-tabs-block__work">
-                        <div class="life-tabs-block__img-wrap">
-                            <img src="images/elon2.jpg" alt="elon-mask">
-                        </div>
-                        <h3 class="life-tabs-block__title">Работа</h3>
-                        <p class="life-tabs-block__text">Период вращения планеты — 24 часа 37 минут 22,7 секунды (относительно звёзд), длина средних марсианских солнечных суток составляет 24 часа 39 минут 35,24409 секунды, всего на 2,7 % длиннее земных суток. Для удобства марсианские сутки именуют «солами». Марсианский год равен 668,59 сола, что составляет 686,98 земных суток.</p>
-                        <div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>
-                    </div>
-                    <div class="life-tabs-block__item life-tabs-block__search">
-                        <div class="life-tabs-block__img-wrap">
-                            <img src="images/elon2.jpg" alt="elon-mask">
-                        </div>
-                        <h3 class="life-tabs-block__title">Исследование</h3>
-                        <p class="life-tabs-block__text">Марс вращается вокруг своей оси, наклонённой относительно перпендикуляра к плоскости орбиты под углом 25,19°. Наклон оси вращения Марса обеспечивает смену времён года. При этом эксцентриситет орбиты приводит к большим различиям в их продолжительности — так, северная весна и лето, длятся 371 местные сутки.</p>
-                        <div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>
-                    </div>
-                    <div class="life-tabs-block__item life-tabs-block__photo">
-                        <div class="life-tabs-block__img-wrap">
-                            <img src="images/elon2.jpg" alt="elon-mask">
-                        </div>
-                        <h3 class="life-tabs-block__title">Галерея</h3>
-                        <p class="life-tabs-block__text">Атмосфера Марса, состоящая в основном из углекислого газа, очень разрежена. Давление у поверхности Марса в 160 раз меньше земного — 6,1 мбар на среднем уровне поверхности. Из-за большого перепада высот на Марсе давление у поверхности сильно изменяется. Примерная толщина атмосферы — 110 км.</p>
-                        <div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>
-                    </div>
-                    <div class="life-tabs-block__item life-tabs-block__agric">
-                        <div class="life-tabs-block__img-wrap">
-                            <img src="images/elon2.jpg" alt="elon-mask">
-                        </div>
-                        <h3 class="life-tabs-block__title">Земледелие</h3>
-                        <p class="life-tabs-block__text">В отличие от Земли, масса марсианской атмосферы сильно изменяется в течение года в связи с таянием и намерзанием полярных шапок, содержащих углекислый газ. Зимой 20—30 % всей атмосферы намораживается на полярной шапке, состоящей из углекислоты.</p>
-                        <div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer id="footer" class="footer">
-            <h2 class="footer-title title">Деньги приготовил. Когда вылетаем?</h2>
-            <div class="footer-main">
-                <div class="footer-main-form-block">
-                    <h3 class="footer-main-form-block__title">Будь в курсе новостей</h3>
-                    <form action="#" class="footer-main-form" id="footer-form">
-                        <div class="form-block">
-                            <span class="form-block__error"></span>
-                            <input type="text" placeholder="Имя" name="form_name" class="footer-main-form__input">
-                        </div>
-                        <div class="form-block">
-                            <span class="form-block__error"></span>
-                            <input type="email" placeholder="E-mail" name="form_email" class="footer-main-form__input">
-                        </div>
-                        <button type="submit" class="footer-main-form__btn js-answer-modal">Подписаться</button>
-                    </form>
-                </div>
-                <div class="footer-main-text">
-                    <p class="footer-main-text__p">
-                        Первый «частный» полёт на Марс осуществит в 2018 году в беспилотном варианте корабль Dragon V2 с помощью тяжёлой ракеты Falcon Heavy. После этого запланированы две миссии в 2020 году, как минимум одна в 2022-м и, вероятно, пилотируемая миссия через два года с достижением Марса в 2025 году.<br><br>  Для всех желающих открыты курсы подготовки.
-                    </p>
-                    <a href="#" class="footer-main-text__link">Критерии отбора</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <a href="#" class="footer-bottom-logo">Pantheon<span class="footer-bottom-logo__span">project</span></a>
-                <a href="#header" class="footer-bottom__link">Подробнее о проекте</a>
-                <div class="footer-bottom-socials-block">
-                    <span class="footer-bottom-socials-text">Следуйте за нами</span>
-                    <div class="footer-bottom-socials">
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--vk"><span class="visually-hidden">vkontakte</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--twitter"><span class="visually-hidden">twitter</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--facebook"><span class="visually-hidden">facebook</span></a>
-                        <a href="#" class="footer-bottom-socials__link footer-bottom-socials__link--youtube"><span class="visually-hidden">youtube</span></a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <div class="modal js-modal" id="js-modal-form">
-            <span class="close js-close"></span>
-            <h3 class="modal__title">Заполните форму</h3>
-            <form action="#" class="modal-form" id="js-register-form">
-                <div class="form-block">
-                    <span class="form-block__error"></span>
-                    <input type="text" placeholder="Ваше имя" name="form_name" class="form-block__input">
-                </div>
-                <div class="form-block">
-                    <span class="form-block__error"></span>
-                    <input type="email" placeholder="maria@mail.ru" name="form_email" class="form-block__input">
-                </div>
-                <div class="form-block">
-                    <span class="form-block__error"></span>
-                    <input type="tel" placeholder="Ваш телефон" name="form_tel" class="form-block__input">
-                </div>
-                <button type="submit" class="modal-form__btn js-answer-modal">Отправить заявку</button>
-            </form>
-        </div>
-        <div class="answer-modal js-modal">
-            <span class="close close--answer js-close2"></span>
-            Спасибо!
-        </div>
-    </div>
+            <!--<div class="header-main">-->
+                <!--<h1 class="header-main-title"><span class="header-main-title__thin">Пункт назначения:</span> Пантеон,<br><span class="header-main-title__bold">Марс</span></h1>-->
+                <!--<div class="header-video">-->
+                    <!--<div class="header-video-block">-->
+                        <!--<video id="my-video-display" controls poster="images/video.jpg">-->
+                            <!--<source src="https://www.youtube.com/watch?v=TnY23KEkZPY" type="video/youtube" />-->
+                        <!--</video>-->
+                    <!--</div>-->
+                    <!--<span class="header-video__text">Первый город на планете Марс, недалеко от горы Олимп</span>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<a href="#about-mars" class="header-button js-header-button"></a>-->
+        <!--</header>-->
+        <!--<div class="header-menu js-menu">-->
+            <!--<nav>-->
+                <!--<ul>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#header" class="header-menu__link">Главная</a></li>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#about-mars" class="header-menu__link">О Марсе</a></li>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#realization" class="header-menu__link">От идеи до реализации</a></li>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#video" class="header-menu__link">Подводные камни в масштабах космоса</a></li>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#life" class="header-menu__link">Организация жизни в колонии</a></li>-->
+                    <!--<li class="header-menu__item js-menu-item"><a href="#footer" class="header-menu__link">Когда вылетаем?</a></li>-->
+                <!--</ul>-->
+            <!--</nav>-->
+        <!--</div>-->
+        <!--<div class="tizers js-scroll">-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">4</div>-->
+                    <!--<p class="tizers-item__text">четвертая планета по удаленности от Солнца</p>-->
+                <!--</div>-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">7</div>-->
+                    <!--<p class="tizers-item__text">седьмая по размерам планета Солнечной системы</p>-->
+                <!--</div>-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">10,7%</div>-->
+                    <!--<p class="tizers-item__text">массы Земли (ваш вес будет в 3 раза меньшe, чем на Земле)</p>-->
+                <!--</div>-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">2</div>-->
+                    <!--<p class="tizers-item__text">спутника вместо Луны (как картошка, только больше)</p>-->
+                <!--</div>-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">21 км</div>-->
+                    <!--<p class="tizers-item__text">высота самой высокой горы Марса</p>-->
+                <!--</div>-->
+                <!--<div class="tizers-item wow fadeInLeftBig">-->
+                    <!--<div class="tizers-item__number">+20</div>-->
+                    <!--<p class="tizers-item__text">максимальная температура на поверхности</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--<div id="about-mars" class="about-mars">-->
+            <!--<h2 class="about-mars-title title">Марс. Вспомнить всё.</h2>-->
+            <!--<div class="about-mars-block">-->
+                <!--<h3 class="about-mars-block__title">Что такое Марс?</h3>-->
+                <!--<p class="about-mars-block__text">Планета Солнечной системы, названа в честь Марса — древнеримского бога войны. Иногда Марс называют «красной планетой» из-за красного оттенка поверхности, придаваемого ей оксидом железа.<br><br>-->
+                    <!--Особенности планеты — наличие слабой отмосферы, состоящей в основном из улекислого газа, времена года, пылевые бури, сильная эррозия почв. </p>-->
+            <!--</div>-->
+            <!--<div class="about-mars-block">-->
+                <!--<h3 class="about-mars-block__title">Где это? Как туда доехать?</h3>-->
+                <!--<p class="about-mars-block__text">Расстояние до Марса — почти 56 миллионов километров.-->
+                    <!--Чтобы преодалеть такое расстояние, нужно лететь-->
+                    <!--на межпланетоном корабле 7-8 месяцев.</p>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;<div class="about-mars-animation">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="about-mars-animation__earth"></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="about-mars-animation__rocket"></div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="about-mars-animation__mars"></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div id="realization" class="realization">-->
+            <!--<h2 class="realization-title title">От идеи до реализации</h2>-->
+            <!--<div class="realization-main">-->
+                <!--<div class="realization-main__img">-->
+                    <!--<img src="images/elon1.jpg" alt="elon">-->
+                <!--</div>-->
+                <!--<div class="realization-main-text">-->
+                    <!--<h3 class="realization-main-text__title">Илон Маск. Гений или безумец?</h3>-->
+                    <!--<p class="realization-main-text__text">-->
+                        <!--Канадско-американский инженер, предприниматель, изобретатель и инвестор; миллиардер. Основатель компаний SpaceX и X.com, позже переименованной в PayPal. Планирует потратить большую часть накоплений на реализацию своей мечты, а также мечты многих тысяч романтиков, писателей, учёных: создать внеземную цивилизацию.-->
+                        <!--<span class="realization-main-text__span">Мы должны сделать эту мечту реальностью за наше время жизни. Любой человек,-->
+<!--который пожелает отправиться на Марс, должен иметь такую возможность</span>-->
+                        <!--— заявил Маск на Международной астронавтической конференции в Гвадалахаре (Мексика). Он обосновал необходимость своего проекта вопросом выживания человечества, которое для своего сохранения должно стать «космическим видом».-->
+                        <!--Илон поставил перед собой цель: скоратить стоимость вывода кораблей-->
+                        <!--в космос в 10 раз, что станет первым шагом для человечества в освоении Марса.-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="realization-fly">-->
+                <!--<img src="images/img.jpg" alt="rocket" class="realization-fly__img">-->
+                <!--<div class="realization-fly-block">-->
+                    <!--<h3 class="realization-fly-block__title">Стоимость перелёта</h3>-->
+                    <!--<p class="realization-fly-block__text">Высадка двоих астронавтов на Луну обошлась США в 20 млрд. долларов. Маск стремится сократить эту цифру в 20 000 раз, что составит <span>500 000 долларов</span> на человека.</p>-->
+                    <!--<div class="realization-fly-cost">-->
+                        <!--<span class="realization-fly-cost__price">$500 k</span>-->
+                        <!--<span class="realization-fly-cost__text">и ты на Марсе!</span>-->
+                        <!--<a href="#js-modal-form" class="realization-fly-cost__btn js-show-modal">Я готов лететь</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="video" class="video">-->
+            <!--<h2 class="video-title title">Подводные камни в масштабах космоса</h2>-->
+            <!--<div class="video-block">-->
+                <!--<video id="my-video-display2" controls poster="images/video2.jpg">-->
+                    <!--<source src="https://www.youtube.com/watch?v=TnY23KEkZPY" type="video/youtube" />-->
+                <!--</video>-->
+            <!--</div>-->
+            <!--<div class="video-tabs">-->
+                <!--<ul class="tabs-list">-->
+                    <!--<li class="tabs-list__item">-->
+                        <!--<a href="#" class="tabs-list__title tabs-list__acc js-title">Жить или выживать?</a>-->
+                        <!--<label class="tabs-list__title tabs-list__radio tabs-list__title&#45;&#45;active">Жить или выживать?</label>-->
+                        <!--<div class="tabs-list-content tabs-list-content&#45;&#45;active">-->
+                            <!--<h3 class="tabs-list-content__title">Жить или выживать?</h3>-->
+                            <!--<p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>-->
+                                <!--Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год-->
+                                <!--по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.-->
+                                <!--<br><br>-->
+                                <!--На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация-->
+                                <!--при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="tabs-list__item">-->
+                        <!--<a href="#" class="tabs-list__title tabs-list__acc js-title">Готовы ли технологии?</a>-->
+                        <!--<label class="tabs-list__title tabs-list__radio">Готовы ли технологии?</label>-->
+                        <!--<div class="tabs-list-content">-->
+                            <!--<h3 class="tabs-list-content__title">Готовы ли технологии?</h3>-->
+                            <!--<p class="tabs-list-content__text">Чем отличаются Земля и Марс? Какие условия встретят новых поселенцев?<br><br>-->
+                                <!--Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год-->
+                                <!--по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.-->
+                                <!--</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="tabs-list__item">-->
+                        <!--<a href="#" class="tabs-list__title tabs-list__acc js-title">Путешествие на грани фантастики</a>-->
+                        <!--<label class="tabs-list__title tabs-list__radio">Путешествие на грани фантастики</label>-->
+                        <!--<div class="tabs-list-content">-->
+                            <!--<h3 class="tabs-list-content__title">Путешествие на грани фантастики</h3>-->
+                            <!--<p class="tabs-list-content__text">На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация-->
+                                <!--при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.<br><br>-->
+                                <!--Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год-->
+                                <!--по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.-->
+                                <!--<br><br>-->
+                                <!--</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                    <!--<li class="tabs-list__item">-->
+                        <!--<a href="#" class="tabs-list__title tabs-list__acc js-title">Жизнь на Марсе</a>-->
+                        <!--<label class="tabs-list__title tabs-list__radio">Жизнь на Марсе</label>-->
+                        <!--<div class="tabs-list-content">-->
+                            <!--<h3 class="tabs-list-content__title">Жизнь на Марсе</h3>-->
+                            <!--<p class="tabs-list-content__text">Марс холодная и засушливая планета, на которой есть своя атмосфера, на 96% состоящая из углекислых газов, а минимальная температура опускается до -140 градусов по Цельсию. Каждый год-->
+                                <!--по весне на планете случаются пылевые бури, длящиеся от нескольких часов до нескольких месяцев.-->
+                                <!--<br><br>-->
+                                <!--На планете отсутствует магнитное поле, поэтому радиационный фон повышен. А низкая гравитация-->
+                                <!--при длитеьном пребывании на Марсе сделает возвращение на Землю невозможным. Полёт на Марс — билет в один конец с целью создать новую цивилизацию.</p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div id="life" class="life">-->
+            <!--<h2 class="life-title title">Организация жизни в колонии</h2>-->
+            <!--<div class="life-tabs">-->
+                <!--<div class="life-tabs-outer-list">-->
+                    <!--<ul class="life-tabs-list">-->
+                    <!--<li class="life-tabs-list__item life-tabs-list__item&#45;&#45;active">-->
+                        <!--<span class="life-tabs-list__icon life-tabs-list__live"></span>-->
+                        <!--<a href="#" class="life-tabs-list__link  life-tabs-list__link&#45;&#45;active">Проживание</a>-->
+                    <!--</li>-->
+                    <!--<li class="life-tabs-list__item">-->
+                        <!--<span class="life-tabs-list__icon life-tabs-list__work"></span>-->
+                        <!--<a href="#" class="life-tabs-list__link ">Работа</a>-->
+                    <!--</li>-->
+                    <!--<li class="life-tabs-list__item">-->
+                        <!--<span class="life-tabs-list__icon life-tabs-list__search"></span>-->
+                        <!--<a href="#" class="life-tabs-list__link ">Исследование</a>-->
+                    <!--</li>-->
+                    <!--<li class="life-tabs-list__item">-->
+                        <!--<span class="life-tabs-list__icon life-tabs-list__photo"></span>-->
+                        <!--<a href="#" class="life-tabs-list__link ">Галерея</a>-->
+                    <!--</li>-->
+                    <!--<li class="life-tabs-list__item">-->
+                        <!--<span class="life-tabs-list__icon life-tabs-list__agric"></span>-->
+                        <!--<a href="#" class="life-tabs-list__link ">Земледелие</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+                    <!--<ul class="life-tabs-controls">-->
+                    <!--<li class="life-tabs-controls__item life-tabs-controls__item&#45;&#45;active"></li>-->
+                    <!--<li class="life-tabs-controls__item"></li>-->
+                    <!--<li class="life-tabs-controls__item"></li>-->
+                    <!--<li class="life-tabs-controls__item"></li>-->
+                    <!--<li class="life-tabs-controls__item"></li>-->
+                <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="life-tabs-block">-->
+                    <!--<div class="life-tabs-block__item life-tabs-block__live life-tabs-block__item&#45;&#45;active">-->
+                        <!--<div class="life-tabs-block__img-wrap">-->
+                            <!--<img src="images/elon2.jpg" alt="elon-mask">-->
+                        <!--</div>-->
+                        <!--<h3 class="life-tabs-block__title">Проживание</h3>-->
+                        <!--<p class="life-tabs-block__text">В основе жилых помещений лежат надувные компоненты — спальня, рабочая зона, гостиная, парник для выращивания зелени — 50 м2 на человека. Благодаря этим компонентам, колонисты смогут принять душ, приготовить свежую пищу, носить обычную одежду. Весь комплекс соединен сетью ходов.</p>-->
+                        <!--<div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="life-tabs-block__item life-tabs-block__work">-->
+                        <!--<div class="life-tabs-block__img-wrap">-->
+                            <!--<img src="images/elon2.jpg" alt="elon-mask">-->
+                        <!--</div>-->
+                        <!--<h3 class="life-tabs-block__title">Работа</h3>-->
+                        <!--<p class="life-tabs-block__text">Период вращения планеты — 24 часа 37 минут 22,7 секунды (относительно звёзд), длина средних марсианских солнечных суток составляет 24 часа 39 минут 35,24409 секунды, всего на 2,7 % длиннее земных суток. Для удобства марсианские сутки именуют «солами». Марсианский год равен 668,59 сола, что составляет 686,98 земных суток.</p>-->
+                        <!--<div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="life-tabs-block__item life-tabs-block__search">-->
+                        <!--<div class="life-tabs-block__img-wrap">-->
+                            <!--<img src="images/elon2.jpg" alt="elon-mask">-->
+                        <!--</div>-->
+                        <!--<h3 class="life-tabs-block__title">Исследование</h3>-->
+                        <!--<p class="life-tabs-block__text">Марс вращается вокруг своей оси, наклонённой относительно перпендикуляра к плоскости орбиты под углом 25,19°. Наклон оси вращения Марса обеспечивает смену времён года. При этом эксцентриситет орбиты приводит к большим различиям в их продолжительности — так, северная весна и лето, длятся 371 местные сутки.</p>-->
+                        <!--<div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="life-tabs-block__item life-tabs-block__photo">-->
+                        <!--<div class="life-tabs-block__img-wrap">-->
+                            <!--<img src="images/elon2.jpg" alt="elon-mask">-->
+                        <!--</div>-->
+                        <!--<h3 class="life-tabs-block__title">Галерея</h3>-->
+                        <!--<p class="life-tabs-block__text">Атмосфера Марса, состоящая в основном из углекислого газа, очень разрежена. Давление у поверхности Марса в 160 раз меньше земного — 6,1 мбар на среднем уровне поверхности. Из-за большого перепада высот на Марсе давление у поверхности сильно изменяется. Примерная толщина атмосферы — 110 км.</p>-->
+                        <!--<div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>-->
+                    <!--</div>-->
+                    <!--<div class="life-tabs-block__item life-tabs-block__agric">-->
+                        <!--<div class="life-tabs-block__img-wrap">-->
+                            <!--<img src="images/elon2.jpg" alt="elon-mask">-->
+                        <!--</div>-->
+                        <!--<h3 class="life-tabs-block__title">Земледелие</h3>-->
+                        <!--<p class="life-tabs-block__text">В отличие от Земли, масса марсианской атмосферы сильно изменяется в течение года в связи с таянием и намерзанием полярных шапок, содержащих углекислый газ. Зимой 20—30 % всей атмосферы намораживается на полярной шапке, состоящей из углекислоты.</p>-->
+                        <!--<div class="life-tabs-block__btn"><a href="#">Подробнее</a></div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<footer id="footer" class="footer">-->
+            <!--<h2 class="footer-title title">Деньги приготовил. Когда вылетаем?</h2>-->
+            <!--<div class="footer-main">-->
+                <!--<div class="footer-main-form-block">-->
+                    <!--<h3 class="footer-main-form-block__title">Будь в курсе новостей</h3>-->
+                    <!--<form action="#" class="footer-main-form" id="footer-form">-->
+                        <!--<div class="form-block">-->
+                            <!--<span class="form-block__error"></span>-->
+                            <!--<input type="text" placeholder="Имя" name="form_name" class="footer-main-form__input">-->
+                        <!--</div>-->
+                        <!--<div class="form-block">-->
+                            <!--<span class="form-block__error"></span>-->
+                            <!--<input type="email" placeholder="E-mail" name="form_email" class="footer-main-form__input">-->
+                        <!--</div>-->
+                        <!--<button type="submit" class="footer-main-form__btn js-answer-modal">Подписаться</button>-->
+                    <!--</form>-->
+                <!--</div>-->
+                <!--<div class="footer-main-text">-->
+                    <!--<p class="footer-main-text__p">-->
+                        <!--Первый «частный» полёт на Марс осуществит в 2018 году в беспилотном варианте корабль Dragon V2 с помощью тяжёлой ракеты Falcon Heavy. После этого запланированы две миссии в 2020 году, как минимум одна в 2022-м и, вероятно, пилотируемая миссия через два года с достижением Марса в 2025 году.<br><br>  Для всех желающих открыты курсы подготовки.-->
+                    <!--</p>-->
+                    <!--<a href="#" class="footer-main-text__link">Критерии отбора</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="footer-bottom">-->
+                <!--<a href="#" class="footer-bottom-logo">Pantheon<span class="footer-bottom-logo__span">project</span></a>-->
+                <!--<a href="#header" class="footer-bottom__link">Подробнее о проекте</a>-->
+                <!--<div class="footer-bottom-socials-block">-->
+                    <!--<span class="footer-bottom-socials-text">Следуйте за нами</span>-->
+                    <!--<div class="footer-bottom-socials">-->
+                        <!--<a href="#" class="footer-bottom-socials__link footer-bottom-socials__link&#45;&#45;vk"><span class="visually-hidden">vkontakte</span></a>-->
+                        <!--<a href="#" class="footer-bottom-socials__link footer-bottom-socials__link&#45;&#45;twitter"><span class="visually-hidden">twitter</span></a>-->
+                        <!--<a href="#" class="footer-bottom-socials__link footer-bottom-socials__link&#45;&#45;facebook"><span class="visually-hidden">facebook</span></a>-->
+                        <!--<a href="#" class="footer-bottom-socials__link footer-bottom-socials__link&#45;&#45;youtube"><span class="visually-hidden">youtube</span></a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</footer>-->
+        <!--<div class="modal js-modal" id="js-modal-form">-->
+            <!--<span class="close js-close"></span>-->
+            <!--<h3 class="modal__title">Заполните форму</h3>-->
+            <!--<form action="#" class="modal-form" id="js-register-form">-->
+                <!--<div class="form-block">-->
+                    <!--<span class="form-block__error"></span>-->
+                    <!--<input type="text" placeholder="Ваше имя" name="form_name" class="form-block__input">-->
+                <!--</div>-->
+                <!--<div class="form-block">-->
+                    <!--<span class="form-block__error"></span>-->
+                    <!--<input type="email" placeholder="maria@mail.ru" name="form_email" class="form-block__input">-->
+                <!--</div>-->
+                <!--<div class="form-block">-->
+                    <!--<span class="form-block__error"></span>-->
+                    <!--<input type="tel" placeholder="Ваш телефон" name="form_tel" class="form-block__input">-->
+                <!--</div>-->
+                <!--<button type="submit" class="modal-form__btn js-answer-modal">Отправить заявку</button>-->
+            <!--</form>-->
+        <!--</div>-->
+        <!--<div class="answer-modal js-modal">-->
+            <!--<span class="close close&#45;&#45;answer js-close2"></span>-->
+            <!--Спасибо!-->
+        <!--</div>-->
+    <!--</div>-->
+    <form name="calc" id="calculator">
+        <!--<input type="text" id="input" class="input-number">-->
+        <!--<button type="submit" class="add">backspace</button>-->
+        <!--<button type="submit" class="add">+ / -</button><br><br>-->
+        <!--<button type="submit" id="pi" class="operation">Число π</button>-->
+        <!--<button type="submit" class="operation">Число е</button><br><br>-->
+        <!--<button type="submit" class="operation">1 / х</button>-->
+        <!--<button type="submit" class="operation">x<span class="sup">n</span></button>-->
+        <!--<button type="submit" class="operation">остаток от деления</button><br><br>-->
+        <!--<button type="submit" class="operation">sin</button>-->
+        <!--<button type="submit" class="operation">cos</button>-->
+        <!--<button type="submit" class="operation">log</button>-->
+        <!--<button type="submit" class="operation">logab</button><br><br>-->
+        <!--<button type="submit" class="count">Посчитать</button><br><br>-->
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="input" size="16" class="display">
+                </td>
+            </tr>
+            <tr>
+                <td class="buttons">
+                    <input type="button" name="one" value="1" OnClick="calc.input.value += '1'">
+                    <input type="button" name="two" value="2" OnClick="calc.input.value += '2'">
+                    <input type="button" name="three" value="3" OnClick="calc.input.value += '3'">
+                    <input type="button" name="add" value="+" OnClick="calc.input.value += '+'">
+                    <br>
+                    <input type="button" name="four" value="4" OnClick="calc.input.value += '4'">
+                    <input type="button" name="five" value="5" OnClick="calc.input.value += '5'">
+                    <input type="button" name="six" value="6" OnClick="calc.input.value += '6'">
+                    <input type="button" name="sub" value="-" OnClick="calc.input.value += '-'">
+                    <br>
+                    <input type="button" name="seven" value="7" OnClick="calc.input.value += '7'">
+                    <input type="button" name="eight" value="8" OnClick="calc.input.value += '8'">
+                    <input type="button" name="nine" value="9" OnClick="calc.input.value += '9'">
+                    <input type="button" name="mul" value="x" OnClick="calc.input.value += '*'">
+                    <br>
+                    <input type="button" name="clear" value="c" OnClick="calc.input.value = ''">
+                    <input type="button" name="zero" value="0" OnClick="calc.input.value += '0'">
+                    <input type="button" name="doit" value="=" OnClick="calc.input.value = eval(calc.input.value)">
+                    <input type="button" name="div"  value="/" OnClick="calc.input.value += '/'">
+                </td>
+            </tr>
+        </table>
+    </form>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/script.js"></script>
 </body>
