@@ -400,12 +400,49 @@
 //
 //     }
 // }
+// OnClick="calc.input.value += '2'"
+    //поле ввода
+    var input = document.getElementById('input');
+    var equal = document.getElementsByClassName('equal');
+    var result = [];
 
-var input = document.getElementById('input'),
-       pi = document.getElementById('pi');
+    //обработчик на =
+    equal[0].addEventListener("click", function(event) {
+        result.push(input.value);
 
-    pi.addEventListener("click", function() {
-        input.innerHTML = '3,1415';
-        console.log(input.innerHTML = '3,1415');
+        var arrOperations = ['+', '-', '*', '/'];
+        // var arrResult = result.filter(function(element, index) {
+           // for (var i = 0; i < arrOperations.length; i++) {
+           //     if (element == arrOperations[i]) {
+           //
+           //     }
+           // }
+        // });
+        console.log(result);
     });
-// console.log(pi);
+
+    //ставим обработчики на каждую кнопку цифры
+    var buttons = document.getElementsByClassName("button");
+
+    for (var i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function(event) {
+            // handleInput(event.target.innerHTML);
+            input.value += this.value;
+        });
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+
+    function substract(a, b) {
+        return a - b;
+    }
+
+    function divide(a, b) {
+        return a / b;
+    }
