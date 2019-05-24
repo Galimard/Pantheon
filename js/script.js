@@ -402,10 +402,12 @@
 // }
 
     //поле ввода
-    var input = document.getElementById('input');
-    var equal = document.getElementsByClassName('equal');
-    var backspase = document.getElementsByClassName('delete');
-    var result = '';
+    var input = document.getElementById('input'),
+           equal = document.getElementsByClassName('equal'),
+           backspase = document.getElementsByClassName('delete'),
+           operationBtn = document.getElementsByClassName('oper'), //кнопки операций
+
+           result = [];
 
     //ставим обработчики на каждую кнопку цифры
     var buttons = document.getElementsByClassName("button");
@@ -416,37 +418,43 @@
         });
     }
 
+    for (var i = 0; i < operationBtn.length; i++) {
+        operationBtn[i].addEventListener("click", function() {
+            result.push(input.value);
+        });
+    }
+
     //обработчик на =
     equal[0].addEventListener("click", function() {
-        result = input.value;
-
-        var arrOperations = ['+', '-', '*', '/'], //для поиска разделителя в массиве
-               operation = '', // разделитель и операция
-               operands = []; //массив с чилами по разделителю
-
-        //ищем в строке положение знака операции для разделения в массиве и для будущей математической операции
-       for (var i = 0; i < arrOperations.length; i++) {
-           if (result.indexOf(arrOperations[i]) != -1) {
-               operation = arrOperations[i];
-           }
-       }
-
-       //превращаем строку в массив по полученному разделителю
-        operands = result.split(operation);
-       //производим вычисление
-        result = chooseOperation(operation, operands);
-        //выводим результат в окно
-        input.value = result;
-
+       //  result = input.value;
+       //
+       //  var arrOperations = ['+', '-', '*', '/'], //для поиска разделителя в массиве
+       //         operation = [], // разделитель и операция
+       //         operands = []; //массив с чилами по разделителю
+       //
+       //  //ищем в строке положение знака операции для разделения в массиве и для будущей математической операции
+       // for (var i = 0; i < arrOperations.length; i++) {
+       //     if (result.indexOf(arrOperations[i]) != -1) {
+       //         operation.push(arrOperations[i]);
+       //     }
+       // }
+       //
+       // //превращаем строку в массив по полученному разделителю
+       //  operands = result.split(operation);
+       // //производим вычисление
+       //  result = chooseOperation(operation, operands);
+       //  //выводим результат в окно
+       //  input.value = result;
+        console.log(result);
     });
 
     //обработчик на С
-    backspase[0].addEventListener("click", function() {
-        result = input.value;
-        result.split('').pop();
-            // result.join('');
-        console.log(result);
-    });
+    // backspase[0].addEventListener("click", function() {
+    //     result = input.value;
+    //     result.split('').pop();
+    //         // result.join('');
+    //     console.log(result);
+    // });
 
     //функции основных математических операций
     function add(array) {
