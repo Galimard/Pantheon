@@ -407,7 +407,7 @@
            backspase = document.getElementsByClassName('delete'),
            operationBtn = document.getElementsByClassName('oper'), //кнопки операций
 
-           result = [];
+           result = '';
 
     //ставим обработчики на каждую кнопку цифры
     var buttons = document.getElementsByClassName("button");
@@ -418,34 +418,44 @@
         });
     }
 
-    for (var i = 0; i < operationBtn.length; i++) {
-        operationBtn[i].addEventListener("click", function() {
-            result.push(input.value);
-        });
-    }
+    // for (var i = 0; i < operationBtn.length; i++) {
+    //     operationBtn[i].addEventListener("click", function() {
+    //         result.push(input.value);
+    //     });
+    // }
 
     //обработчик на =
     equal[0].addEventListener("click", function() {
-       //  result = input.value;
-       //
-       //  var arrOperations = ['+', '-', '*', '/'], //для поиска разделителя в массиве
-       //         operation = [], // разделитель и операция
-       //         operands = []; //массив с чилами по разделителю
-       //
-       //  //ищем в строке положение знака операции для разделения в массиве и для будущей математической операции
-       // for (var i = 0; i < arrOperations.length; i++) {
-       //     if (result.indexOf(arrOperations[i]) != -1) {
-       //         operation.push(arrOperations[i]);
-       //     }
-       // }
-       //
-       // //превращаем строку в массив по полученному разделителю
+        result = input.value;
+
+        var arrOperations = ['+', '-', '*', '/'], //для поиска разделителя в массиве
+               operation = [], // разделитель и операция
+               operands = []; //массив с чилами по разделителю
+
+        //ищем в строке положение знака операции для разделения в массиве и для будущей математической операции
+       for (var i = 0; i < arrOperations.length; i++) {
+           if (result.indexOf(arrOperations[i]) != -1) {
+               operation.push(arrOperations[i]);
+           }
+       }
+
+        var newArr = result.split(' ').filter(function(elem) {
+            for (var i = 0; i < operation.length; i++) {
+                if (elem != operation[i]) {
+                    return true;
+                }
+            }
+        });
+
+       console.log(newArr);
+
+       // превращаем строку в массив по полученному разделителю
        //  operands = result.split(operation);
        // //производим вычисление
        //  result = chooseOperation(operation, operands);
        //  //выводим результат в окно
        //  input.value = result;
-        console.log(result);
+
     });
 
     //обработчик на С
