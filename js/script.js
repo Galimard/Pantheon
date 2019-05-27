@@ -436,18 +436,20 @@
        for (var i = 0; i < arrOperations.length; i++) {
            if (result.indexOf(arrOperations[i]) != -1) {
                operation.push(arrOperations[i]);
+           } else {
+               operands.push(result.indexOf(arrOperations[i]) == -1);
            }
        }
 
-        var newArr = result.split(' ').filter(function(elem) {
-            for (var i = 0; i < operation.length; i++) {
-                if (elem != operation[i]) {
-                    return true;
-                }
-            }
-        });
+        // var newArr = result.split(' ').filter(function(elem) {
+        //     for (var i = 0; i < operation.length; i++) {
+        //         if (elem != operation[i]) {
+        //             return true;
+        //         }
+        //     }
+        // });
 
-       console.log(newArr);
+       console.log(operands);
 
        // превращаем строку в массив по полученному разделителю
        //  operands = result.split(operation);
