@@ -401,12 +401,35 @@
 //     }
 // }
 
-    //поле ввода
-    var input = document.getElementById('input'),
-           equal = document.getElementsByClassName('equal'),
-           backspase = document.getElementsByClassName('delete'),
-           operationBtn = document.getElementsByClassName('oper'), //кнопки операций
 
+    var input = document.getElementById('input'),  //поле ввода
+           equalBtn = document.getElementsByClassName('equal'), //кнопка равно
+           deleteBtn = document.getElementsByClassName('delete'), //кнопка удалить
+           operationBtn = document.getElementsByClassName('oper'), //кнопки операций
+           digits = function (str) { //получение массива с числами, операциями
+               var arrOperations = [], //массив с операциями
+                        numbers = [], //массив с числами
+                        result = [];
+
+               //получаем массив с операциями
+               for (var i = 0; i <= str.length; i++) {
+                   if((str[i] ==='+') || (str[i] ==='-') || (str[i] ==='*') || (str[i] ==='/')) {
+                       arrOperations.push(str[i]);
+                   }
+               }
+
+               str = str.replace(/\+/g, '.');
+               str = str.replace(/\-/g, '.');
+               str = str.replace(/\*/g, '.');
+               str = str.replace(/\//g, '.');
+
+               numbers = str.split('.'); //получаем массив с числами
+
+               result.push(arrOperations);
+               result.push(numbers);
+
+               return result;
+            },
            result = '';
 
     //ставим обработчики на каждую кнопку цифры
@@ -418,94 +441,73 @@
         });
     }
 
-    // for (var i = 0; i < operationBtn.length; i++) {
-    //     operationBtn[i].addEventListener("click", function() {
-    //         result.push(input.value);
-    //     });
-    // }
-
     //обработчик на =
-    equal[0].addEventListener("click", function() {
-        result = input.value;
+    equalBtn[0].addEventListener("click", function() {
+            var stringValue = input.value,
+                    arrValues =  digits(stringValue),
+                    result = '';
 
-        var arrOperations = ['+', '-', '*', '/'], //для поиска разделителя в массиве
-               operation = [], // разделитель и операция
-               operands = []; //массив с чилами по разделителю
-
-        //ищем в строке положение знака операции для разделения в массиве и для будущей математической операции
-       for (var i = 0; i < arrOperations.length; i++) {
-           if (result.indexOf(arrOperations[i]) != -1) {
-               operation.push(arrOperations[i]);
-           } else {
-               operands.push(result.indexOf(arrOperations[i]) == -1);
-           }
-       }
-
-        // var newArr = result.split(' ').filter(function(elem) {
-        //     for (var i = 0; i < operation.length; i++) {
-        //         if (elem != operation[i]) {
-        //             return true;
-        //         }
-        //     }
-        // });
-
-       console.log(operands);
-
-       // превращаем строку в массив по полученному разделителю
-       //  operands = result.split(operation);
-       // //производим вычисление
-       //  result = chooseOperation(operation, operands);
-       //  //выводим результат в окно
-       //  input.value = result;
+    //производим вычисление
+    //     mathOperation(arrValues[0], arrValues[1]);
+    //     console.log(mathOperation(arrValues[0], arrValues[1]));
+        console.log(chooseOperation(arrValues[0]), 5, 3);
+    // result = chooseOperation(arrValues[0], arrValues[1]);
+    // //выводим результат в окно
+    // input.value = result;
 
     });
 
     //обработчик на С
-    // backspase[0].addEventListener("click", function() {
+    // deleteBtn[0].addEventListener("click", function() {
     //     result = input.value;
-    //     result.split('').pop();
-    //         // result.join('');
+    //
     //     console.log(result);
     // });
 
     //функции основных математических операций
-    function add(array) {
-        var result = array.reduce(function(sum, elem) {
-            return Number(sum) + Number(elem);
-        });
+    function mathOperation (arrOperations, arrNumbers) {
+
+
+            var result = arrNumbers.reduce(function(res, elem) {
+                return chooseOperation(arrOperations, res, elem);
+
+
+
+            }, 0);
+
         return result;
     }
 
-    function multiply(array) {
-        var result = array.reduce(function(mult, elem) {
-            return Number(mult) * Number(elem);
-        });
-        return result;
-    }
-
-    function substract(array) {
-        var result = array.reduce(function(sub, elem) {
-            return Number(sub) - Number(elem);
-        });
-        return result;
-    }
-
-    function divide(array) {
-        var result = array.reduce(function(div, elem) {
-            return Number(div) / Number(elem);
-        });
-        return result;
-    }
-
-    //выбираем операцию по полученному в клике знаку
-    //@param operation {string} знак операции
-    //@param operands {array} массив с числами
-    //@return {function} возвращаем результат функции математичсекого вычисления
-    function chooseOperation(operation, operands) {
-        switch (operation) {
-            case '+': return add(operands);
-            case '-': return substract(operands);
-            case '*': return multiply(operands);
-            case '/': return divide(operands);
+//выбираем операцию по полученному в клике знаку
+//@param operation {string} знак операции
+//@param operands {array} массив с числами
+//@return {function} возвращаем результат функции математичсекого вычисления
+function chooseOperation(arrOperations, a, b) {
+    for (var i = 0; i < arrOperations.length; i++) {
+        console.log(arrOperations[i]);
+        switch (arrOperations[i]) {
+            case '+': return add(a, b);
+            case '-': return substract(a, b);
+            case '*': return multiply(a, b);
+            case '/': return divide(a, b);
         }
     }
+
+}
+
+//функции основных математических операций
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function substract(a, b) {
+    return a - b;
+}
+
+function divide(a, b) {
+    return a / b;
+}
